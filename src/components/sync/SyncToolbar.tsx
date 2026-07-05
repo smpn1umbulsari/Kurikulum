@@ -69,6 +69,7 @@ export function SyncToolbar() {
         <button
           onClick={() => handleOpenValidation('sinkron')}
           disabled={isSyncing || !isOnline}
+          aria-label="Kirim data ke cloud"
           title={isOnline ? 'Kirim data lokal ke cloud' : 'Offline — tidak dapat menyinkronkan'}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors border ${
             !isOnline
@@ -95,6 +96,7 @@ export function SyncToolbar() {
         <button
           onClick={() => handleOpenValidation('tarik')}
           disabled={isSyncing || !isOnline}
+          aria-label="Tarik data dari cloud"
           title={isOnline ? 'Ambil data terbaru dari cloud' : 'Offline — tidak dapat menarik data'}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors border ${
             !isOnline

@@ -130,7 +130,15 @@ export default function MainLayout() {
 
   return (
     <div className={`flex h-screen overflow-hidden ${largeText ? 'text-lg' : 'text-sm'} ${highContrast ? 'bg-black text-yellow-400 contrast-125' : 'bg-neutral-50 text-neutral-800'}`}>
-      
+
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-medium focus:shadow-lg"
+      >
+        Langsung ke konten utama
+      </a>
+
       {/* Mobile Sidebar Overlay */}
       {mobileSidebarOpen && (
         <div className="fixed inset-0 z-40 flex md:hidden bg-black bg-opacity-50">
@@ -138,6 +146,7 @@ export default function MainLayout() {
             <div className="absolute top-0 right-0 -mr-12 pt-2">
               <button
                 type="button"
+                aria-label="Tutup menu navigasi"
                 className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 onClick={() => setMobileSidebarOpen(false)}
               >
@@ -148,7 +157,7 @@ export default function MainLayout() {
               <span className="text-xl font-bold text-primary-600">SIKAD v4.0</span>
             </div>
             <div className="mt-5 h-0 flex-1 overflow-y-auto">
-              <nav className="space-y-1 px-4">{navLinks}</nav>
+              <nav aria-label="Menu navigasi" className="space-y-1 px-4">{navLinks}</nav>
             </div>
           </div>
         </div>
@@ -160,7 +169,7 @@ export default function MainLayout() {
           <span className="text-xl font-bold text-primary-600 font-sans">SIKAD v4.0</span>
         </div>
         <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
-          <nav className="flex-1 space-y-1 px-4">{navLinks}</nav>
+          <nav aria-label="Menu navigasi" className="flex-1 space-y-1 px-4">{navLinks}</nav>
         </div>
         <div className="flex flex-shrink-0 border-t border-neutral-200 p-4 bg-neutral-50">
           <div className="flex items-center justify-between w-full">
@@ -170,7 +179,7 @@ export default function MainLayout() {
                 <p className="text-[10px] text-neutral-500 capitalize">{user?.role?.toLowerCase().replace('_', ' ')}</p>
               </div>
             </div>
-            <button onClick={handleLogout} className="text-neutral-500 hover:text-red-600 transition-[transform,colors] duration-150 ease-out active:scale-90">
+            <button onClick={handleLogout} aria-label="Keluar dari aplikasi" className="text-neutral-500 hover:text-red-600 transition-[transform,colors] duration-150 ease-out active:scale-90">
               <LogOut className="h-4 w-4" />
             </button>
           </div>
@@ -183,6 +192,7 @@ export default function MainLayout() {
         <header className="app-panel--toolbar flex h-16 items-center justify-between px-6 border-b border-neutral-200 bg-white">
           <div className="flex items-center gap-3">
             <button
+              aria-label="Buka menu navigasi"
               onClick={() => setMobileSidebarOpen(true)}
               className="md:hidden text-neutral-500 hover:text-neutral-700"
             >
@@ -197,6 +207,7 @@ export default function MainLayout() {
             {/* Elderly Accessibility buttons */}
             <div className="flex items-center gap-1 border-r border-neutral-200 pr-4">
               <button
+                aria-label={largeText ? 'Kecilkan teks' : 'Perbesar teks'}
                 onClick={() => setLargeText(!largeText)}
                 title="Perbesar Teks"
                 className={`p-2 rounded hover:bg-neutral-100 transition-[transform,colors] duration-150 ease-out active:scale-90 ${largeText ? 'bg-primary-100 text-primary-600' : 'text-neutral-500'}`}
@@ -204,6 +215,7 @@ export default function MainLayout() {
                 <Type className="h-4 w-4" />
               </button>
               <button
+                aria-label={highContrast ? 'Matikan kontras tinggi' : 'Aktifkan kontras tinggi'}
                 onClick={() => setHighContrast(!highContrast)}
                 title="Kontras Tinggi"
                 className={`p-2 rounded hover:bg-neutral-100 transition-[transform,colors] duration-150 ease-out active:scale-90 ${highContrast ? 'bg-yellow-100 text-yellow-800' : 'text-neutral-500'}`} /* impeccable-disable-line gray-on-color */
@@ -242,7 +254,12 @@ export default function MainLayout() {
         </header>
 
         {/* Content body */}
-        <main className={`flex-1 overflow-y-auto p-6 focus:outline-none ${highContrast ? 'bg-black' : 'bg-neutral-50'}`}>
+        <main
+          id="main-content"
+          role="main"
+          aria-label="Konten utama"
+          className={`flex-1 overflow-y-auto p-6 focus:outline-none ${highContrast ? 'bg-black' : 'bg-neutral-50'}`}
+        >
           <div className="w-full h-full">
             <Outlet />
           </div>
