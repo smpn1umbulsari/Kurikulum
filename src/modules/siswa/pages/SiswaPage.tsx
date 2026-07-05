@@ -215,11 +215,11 @@ export default function SiswaPage() {
           <p className="text-sm text-neutral-500">Kelola biodata peserta didik aktif sekolah.</p>
         </div>
         <div className="flex gap-3">
-          <div className="bg-white px-4 py-2 rounded-xl border border-neutral-200 flex items-center gap-3">
+          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 flex items-center gap-3">
             <div><p className="text-xs text-neutral-500">Total</p><p className="text-lg font-bold">{totalSiswa}</p></div>
             <Users className="h-6 w-6 text-emerald-500" />
           </div>
-          <div className="bg-white px-4 py-2 rounded-xl border border-neutral-200 flex items-center gap-3">
+          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 flex items-center gap-3">
             <div><p className="text-xs text-neutral-500">Aktif</p><p className="text-lg font-bold text-emerald-600">{aktifSiswa}</p></div>
             <CheckCircle className="h-6 w-6 text-emerald-500" />
           </div>
@@ -227,22 +227,22 @@ export default function SiswaPage() {
       </div>
 
       {/* Toolbar */}
-      <div className="bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
         <div className="flex flex-wrap items-center gap-2 p-4 border-b border-neutral-100">
-          <button onClick={() => openModal(null)} className="flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold">
+          <button onClick={() => openModal(null)} className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-medium text-sm font-semibold">
             <Plus className="h-4 w-4" /> Tambah Siswa
           </button>
-          <button onClick={handleDownloadTemplate} className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium">
+          <button onClick={handleDownloadTemplate} className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium">
             <Download className="h-4 w-4" /> Template
           </button>
-          <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium cursor-pointer">
+          <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium cursor-pointer">
             <Upload className="h-4 w-4" /> Import
             <input type="file" accept=".xlsx,.xls" className="hidden" onChange={handleExcelImport} />
           </label>
-          <button onClick={handleReset} className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium">
+          <button onClick={handleReset} className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium">
             <RotateCcw className="h-4 w-4" /> Reset
           </button>
-          <button onClick={() => { refetch(); setCurrentPage(1); }} className={`flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium ${isLoading ? 'animate-spin' : ''}`}>
+          <button onClick={() => { refetch(); setCurrentPage(1); }} className={`flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium ${isLoading ? 'animate-spin' : ''}`}>
             <RefreshCw className="h-4 w-4" /> Refresh
           </button>
         </div>
@@ -251,12 +251,12 @@ export default function SiswaPage() {
             <label className="flex items-center gap-2 text-xs font-semibold text-neutral-500 uppercase mb-1"><Search className="h-3 w-3" /> Pencarian</label>
             <input type="text" placeholder="Cari nama, NISN, NIPD..." value={searchTerm}
               onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
-              className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" />
           </div>
           <div className="w-36">
             <label className="block text-xs font-semibold text-neutral-500 uppercase mb-1">Tingkat</label>
             <select value={tingkatFilter} onChange={(e) => { setTingkatFilter(e.target.value); setCurrentPage(1); }}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-xl text-sm">
+              className="w-full px-3 py-2 border border-neutral-300 rounded-medium text-sm">
               <option value="">Semua</option>
               <option value="VII">VII</option><option value="VIII">VIII</option><option value="IX">IX</option>
             </select>
@@ -264,7 +264,7 @@ export default function SiswaPage() {
           <div className="w-36">
             <label className="block text-xs font-semibold text-neutral-500 uppercase mb-1">Agama</label>
             <select value={agamaFilter} onChange={(e) => { setAgamaFilter(e.target.value); setCurrentPage(1); }}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-xl text-sm">
+              className="w-full px-3 py-2 border border-neutral-300 rounded-medium text-sm">
               <option value="">Semua</option>
               {AGAMA_OPTIONS.map(opt => <option key={opt} value={opt}>{opt}</option>)}
             </select>
@@ -272,7 +272,7 @@ export default function SiswaPage() {
           <div className="flex items-end gap-2">
             <span className="text-sm text-neutral-600 font-medium">{filteredSiswas.length} siswa</span>
             <select value={rowsPerPage} onChange={(e) => { setRowsPerPage(Number(e.target.value)); setCurrentPage(1); }}
-              className="px-3 py-2 border border-neutral-300 rounded-xl text-sm">
+              className="px-3 py-2 border border-neutral-300 rounded-medium text-sm">
               <option value={10}>10</option><option value={20}>20</option><option value={50}>50</option><option value={100}>100</option>
             </select>
           </div>
@@ -280,7 +280,7 @@ export default function SiswaPage() {
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-neutral-50 border-b border-neutral-200">
@@ -348,44 +348,44 @@ export default function SiswaPage() {
       {/* Modal Form */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-          <div className="bg-white rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-2xl">
+          <div className="w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-floating">
             <div className="px-6 py-5 border-b border-neutral-200 bg-gradient-to-r from-emerald-50 to-white">
               <div className="flex items-start justify-between">
                 <div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase mb-2">Input Data Siswa</span>
                   <h3 className="text-xl font-bold">{editingSiswa ? 'Ubah Data Siswa' : 'Tambah Siswa Baru'}</h3>
                 </div>
-                <button onClick={closeModal} className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-xl"><X className="h-5 w-5" /></button>
+                <button onClick={closeModal} className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-medium"><X className="h-5 w-5" /></button>
               </div>
             </div>
             <form onSubmit={handleSubmit} className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
               <div className="grid grid-cols-2 gap-4">
                 <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">NIPD</label>
                   <input type="text" value={nipd} onChange={(e) => setNipd(e.target.value)} placeholder="1001"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm" /></div>
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
                 <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">NISN</label>
                   <input type="text" value={nisn} onChange={(e) => setNisn(e.target.value)} placeholder="0123456789"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm" /></div>
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
                 <div className="col-span-2"><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Nama Lengkap *</label>
                   <input type="text" value={nama} onChange={(e) => setNama(e.target.value)} placeholder="Nama Siswa"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm" required /></div>
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" required /></div>
                 <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">JK</label>
                   <select value={jk} onChange={(e) => setJk(e.target.value as JenisKelamin)}
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm">
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm">
                     <option value="L">Laki-laki</option><option value="P">Perempuan</option>
                   </select></div>
                 <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Agama</label>
                   <select value={agama} onChange={(e) => setAgama(e.target.value)}
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm">
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm">
                     <option value="">Pilih</option>
                     {AGAMA_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
                   </select></div>
                 <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Tempat Lahir</label>
                   <input type="text" value={tempatLahir} onChange={(e) => setTempatLahir(e.target.value)} placeholder="Jakarta"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm" /></div>
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
                 <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Tanggal Lahir</label>
                   <input type="date" value={tanggalLahir} onChange={(e) => setTanggalLahir(e.target.value)}
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm" /></div>
+                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
 
                 <div className="col-span-2">
                   <label className="flex items-center gap-2"><input type="checkbox" checked={statusAktif} onChange={(e) => setStatusAktif(e.target.checked)} className="h-4 w-4" />
@@ -393,9 +393,9 @@ export default function SiswaPage() {
                 </div>
               </div>
               <div className="flex justify-end gap-3 mt-6 pt-4 border-t">
-                <button type="button" onClick={closeModal} className="px-4 py-2 border border-neutral-300 rounded-xl text-sm">Batal</button>
+                <button type="button" onClick={closeModal} className="px-4 py-2 border border-neutral-300 rounded-medium text-sm">Batal</button>
                 <button type="submit" disabled={saveSiswaMutation.isPending}
-                  className="px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm font-semibold disabled:opacity-50">
+                  className="px-4 py-2 bg-primary-600 text-white rounded-medium text-sm font-semibold disabled:opacity-50">
                   {saveSiswaMutation.isPending ? 'Menyimpan...' : 'Simpan'}
                 </button>
               </div>
@@ -407,7 +407,7 @@ export default function SiswaPage() {
       {/* Preview Modal */}
       {isPreviewModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50" onClick={(e) => { if (e.target === e.currentTarget) setIsPreviewModalOpen(false); }}>
-          <div className="bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-hidden shadow-2xl">
+          <div className="bg-white rounded-card w-full max-w-5xl max-h-[90vh] overflow-hidden shadow-floating">
             <div className="px-6 py-4 border-b bg-emerald-50">
               <div className="flex items-center justify-between">
                 <div>
@@ -419,7 +419,7 @@ export default function SiswaPage() {
                     <span className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full">Error: {importPreview.filter(r => r.status === 'ERROR').length}</span>
                   </div>
                 </div>
-                <button onClick={() => setIsPreviewModalOpen(false)} className="p-2 text-neutral-400 hover:bg-neutral-100 rounded-xl"><X className="h-5 w-5" /></button>
+                <button onClick={() => setIsPreviewModalOpen(false)} className="p-2 text-neutral-400 hover:bg-neutral-100 rounded-medium"><X className="h-5 w-5" /></button>
               </div>
             </div>
             <div className="overflow-auto max-h-[50vh] p-4">
@@ -450,13 +450,13 @@ export default function SiswaPage() {
                 <label className="flex items-center gap-2"><input type="radio" name="mode" value="overwrite" checked={importMode === 'overwrite'} onChange={(e) => setImportMode(e.target.value as typeof importMode)} /> <span className="text-sm">Overwrite</span></label>
               </div>
               <div className="flex justify-end gap-3">
-                <button onClick={() => setIsPreviewModalOpen(false)} className="px-4 py-2 border rounded-xl text-sm">Batal</button>
+                <button onClick={() => setIsPreviewModalOpen(false)} className="px-4 py-2 border rounded-medium text-sm">Batal</button>
                 <button onClick={() => {
                   importSiswaMutation.mutate({ preview: importPreview, mode: importMode }, {
                     onSuccess: () => { setIsPreviewModalOpen(false); setImportPreview([]); refetch(); toast.success('Import berhasil!'); },
                     onError: (e) => toast.error(`Gagal: ${e}`),
                   });
-                }} disabled={importSiswaMutation.isPending} className="px-4 py-2 bg-emerald-600 text-white rounded-xl text-sm disabled:opacity-50">
+                }} disabled={importSiswaMutation.isPending} className="px-4 py-2 bg-primary-600 text-white rounded-medium text-sm disabled:opacity-50">
                   {importSiswaMutation.isPending ? 'Mengupload...' : 'Upload'}
                 </button>
               </div>

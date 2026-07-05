@@ -333,21 +333,21 @@ export default function GuruPage() {
 
         {/* KPI Badge */}
         <div className="flex gap-3">
-          <div className="bg-white px-4 py-2 rounded-xl border border-neutral-200 shadow-sm flex items-center gap-3">
+          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 shadow-sm flex items-center gap-3">
             <div>
               <p className="text-xs text-neutral-500 font-medium">Total</p>
               <p className="text-lg font-bold text-neutral-900">{totalGuru}</p>
             </div>
             <Users className="h-6 w-6 text-blue-500" />
           </div>
-          <div className="bg-white px-4 py-2 rounded-xl border border-neutral-200 shadow-sm flex items-center gap-3">
+          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 shadow-sm flex items-center gap-3">
             <div>
               <p className="text-xs text-neutral-500 font-medium">Aktif</p>
               <p className="text-lg font-bold text-emerald-600">{aktifGuru}</p>
             </div>
             <CheckCircle className="h-6 w-6 text-emerald-500" />
           </div>
-          <div className="bg-white px-4 py-2 rounded-xl border border-neutral-200 shadow-sm flex items-center gap-3">
+          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 shadow-sm flex items-center gap-3">
             <div>
               <p className="text-xs text-neutral-500 font-medium">Nonaktif</p>
               <p className="text-lg font-bold text-neutral-400">{nonAktifGuru}</p>
@@ -358,12 +358,12 @@ export default function GuruPage() {
       </div>
 
       {/* Toolbar */}
-      <div className="bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
         {/* Actions Row */}
         <div className="flex flex-wrap items-center gap-2 p-4 border-b border-neutral-100">
           <button
             onClick={() => openModal(null)}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-medium text-sm font-semibold transition-colors"
           >
             <Plus className="h-4 w-4" />
             Tambah Guru
@@ -371,13 +371,13 @@ export default function GuruPage() {
 
           <button
             onClick={handleDownloadTemplate}
-            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors"
           >
             <Download className="h-4 w-4" />
             Template
           </button>
 
-          <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium transition-colors cursor-pointer">
+          <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors cursor-pointer">
             <Upload className="h-4 w-4" />
             Import
             <input
@@ -391,7 +391,7 @@ export default function GuruPage() {
 
           <button
             onClick={handleReset}
-            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors"
           >
             <RotateCcw className="h-4 w-4" />
             Reset
@@ -399,7 +399,7 @@ export default function GuruPage() {
 
           <button
             onClick={handleRefresh}
-            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-xl text-sm font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors"
           >
             <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
             Refresh
@@ -418,7 +418,7 @@ export default function GuruPage() {
               placeholder="Cari guru, kode, NIP, status, atau mapel..."
               value={searchTerm}
               onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
-              className="w-full px-4 py-2 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
             />
           </div>
 
@@ -429,7 +429,7 @@ export default function GuruPage() {
             <select
               value={statusFilter}
               onChange={(e) => { setStatusFilter(e.target.value); setCurrentPage(1); }}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <option value="">Semua</option>
               {GURU_STATUS_OPTIONS.map(opt => (
@@ -445,7 +445,7 @@ export default function GuruPage() {
             <select
               value={rowsPerPage}
               onChange={(e) => { setRowsPerPage(Number(e.target.value)); setCurrentPage(1); }}
-              className="px-3 py-2 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-3 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <option value={10}>10</option>
               <option value={20}>20</option>
@@ -458,7 +458,7 @@ export default function GuruPage() {
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-2xl border border-neutral-200 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-neutral-50 border-b border-neutral-200">
@@ -576,7 +576,7 @@ export default function GuruPage() {
                           <div className="flex justify-end gap-1">
                             <button
                               onClick={() => handleSaveEdit(guru)}
-                              className="px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-lg hover:bg-blue-700"
+                              className="px-3 py-1 bg-primary-600 text-white text-xs font-semibold rounded-medium hover:bg-primary-700"
                             >
                               Simpan
                             </button>
@@ -677,7 +677,7 @@ export default function GuruPage() {
       {/* Modal Form */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-          <div className="bg-white rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-2xl">
+          <div className="bg-white rounded-card w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-floating">
             {/* Modal Header */}
             <div className="relative px-6 py-5 border-b border-neutral-200 bg-gradient-to-r from-blue-50 to-white">
               <div className="flex items-start justify-between">
@@ -696,13 +696,13 @@ export default function GuruPage() {
                 </div>
                 <button
                   onClick={closeModal}
-                  className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-xl transition-colors"
+                  className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-medium transition-colors"
                 >
                   <X className="h-5 w-5" />
                 </button>
               </div>
               {/* Badge */}
-              <div className="absolute top-4 right-16 bg-neutral-900 text-white px-4 py-3 rounded-2xl text-center">
+              <div className="absolute top-4 right-16 bg-neutral-900 text-white px-4 py-3 rounded-card text-center">
                 <p className="text-lg font-bold">7</p>
                 <p className="text-xs text-neutral-400">Field</p>
               </div>
@@ -720,7 +720,7 @@ export default function GuruPage() {
                     value={kode}
                     onChange={(e) => setKode(e.target.value.toUpperCase())}
                     placeholder="Contoh: GR-001"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     required
                   />
                 </div>
@@ -734,7 +734,7 @@ export default function GuruPage() {
                     value={nip}
                     onChange={(e) => setNip(e.target.value)}
                     placeholder="19xxxxxxxxxxxxxx"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   />
                 </div>
 
@@ -745,7 +745,7 @@ export default function GuruPage() {
                   <select
                     value={status}
                     onChange={(e) => setStatus(e.target.value)}
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     {GURU_STATUS_OPTIONS.map(opt => (
                       <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -760,7 +760,7 @@ export default function GuruPage() {
                   <select
                     value={mapel}
                     onChange={(e) => setMapel(e.target.value)}
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="">Pilih Mapel</option>
                     {INDUK_MAPEL_OPTIONS.map(opt => (
@@ -778,7 +778,7 @@ export default function GuruPage() {
                     value={nama}
                     onChange={(e) => setNama(e.target.value)}
                     placeholder="Masukkan nama tanpa gelar"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     required
                   />
                 </div>
@@ -792,7 +792,7 @@ export default function GuruPage() {
                     value={gelarDepan}
                     onChange={(e) => setGelarDepan(e.target.value)}
                     placeholder="Contoh: Drs."
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
 
@@ -805,7 +805,7 @@ export default function GuruPage() {
                     value={gelarBelakang}
                     onChange={(e) => setGelarBelakang(e.target.value)}
                     placeholder="Contoh: S.Pd."
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
 
@@ -816,7 +816,7 @@ export default function GuruPage() {
                   <select
                     value={jk}
                     onChange={(e) => setJk(e.target.value as JenisKelamin)}
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="L">Laki-laki</option>
                     <option value="P">Perempuan</option>
@@ -832,7 +832,7 @@ export default function GuruPage() {
                     value={noHp}
                     onChange={(e) => setNoHp(e.target.value)}
                     placeholder="08xxxxxxxxxx"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
                   />
                 </div>
 
@@ -842,7 +842,7 @@ export default function GuruPage() {
                       type="checkbox"
                       checked={statusAktif}
                       onChange={(e) => setStatusAktif(e.target.checked)}
-                      className="h-5 w-5 text-blue-600 border-neutral-300 rounded focus:ring-blue-500"
+                      className="h-5 w-5 text-primary-600 border-neutral-300 rounded focus:ring-primary-500"
                     />
                     <span className="text-sm text-neutral-700">Guru aktif / masih mengajar</span>
                   </label>
@@ -858,14 +858,14 @@ export default function GuruPage() {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="px-5 py-2.5 border border-neutral-300 rounded-xl text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
+                    className="px-5 py-2.5 border border-neutral-300 rounded-medium text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
                   >
                     Batal
                   </button>
                   <button
                     type="submit"
                     disabled={saveGuruMutation.isPending}
-                    className="px-5 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-semibold hover:bg-blue-700 disabled:opacity-50 transition-colors"
+                    className="px-5 py-2.5 bg-primary-600 text-white rounded-medium text-sm font-semibold hover:bg-primary-700 disabled:opacity-50 transition-colors"
                   >
                     {saveGuruMutation.isPending ? 'Menyimpan...' : 'Simpan Data Guru'}
                   </button>
@@ -884,7 +884,7 @@ export default function GuruPage() {
             if (e.target === e.currentTarget) setIsPreviewModalOpen(false);
           }}
         >
-          <div className="bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-hidden shadow-2xl flex flex-col">
+          <div className="bg-white rounded-card w-full max-w-5xl max-h-[90vh] overflow-hidden shadow-floating flex flex-col">
             {/* Header */}
             <div className="px-6 py-4 border-b border-neutral-200 bg-gradient-to-r from-blue-50 to-white">
               <div className="flex items-center justify-between">
@@ -894,7 +894,7 @@ export default function GuruPage() {
                 </div>
                 <button
                   onClick={() => setIsPreviewModalOpen(false)}
-                  className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-xl transition-colors"
+                  className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-medium transition-colors"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -1056,7 +1056,7 @@ export default function GuruPage() {
                     setIsPreviewModalOpen(false);
                     setImportPreview([]);
                   }}
-                  className="px-5 py-2.5 border border-neutral-300 rounded-xl text-sm font-medium text-neutral-700 hover:bg-neutral-100 transition-colors"
+                  className="px-5 py-2.5 border border-neutral-300 rounded-medium text-sm font-medium text-neutral-700 hover:bg-neutral-100 transition-colors"
                 >
                   Batal
                 </button>
@@ -1077,7 +1077,7 @@ export default function GuruPage() {
                     );
                   }}
                   disabled={importGuruMutation.isPending || importPreview.length === 0}
-                  className="px-5 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-semibold hover:bg-blue-700 disabled:opacity-50 transition-colors"
+                  className="px-5 py-2.5 bg-primary-600 text-white rounded-medium text-sm font-semibold hover:bg-primary-700 disabled:opacity-50 transition-colors"
                 >
                   {importGuruMutation.isPending ? 'Mengupload...' : 'Upload'}
                 </button>
