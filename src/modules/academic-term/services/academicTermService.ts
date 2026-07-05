@@ -36,9 +36,8 @@ export class AcademicTermService extends BaseService {
    * Sets a specific academic term as active locally (enforcing single active term constraint)
    */
   async setActiveTermLocal(termId: string): Promise<void> {
-    const terms = await db.academicTerms.toArray();
-    
-    await db.transaction('rw', [db.academicTerms], async () => {
+    await db.transaction('rw', [db.academicTerms, db.syncQueue], async () => {
+      const terms = await db.academicTerms.toArray();
       for (const term of terms) {
         const isTarget = term.id === termId;
         if (term.status !== isTarget) {

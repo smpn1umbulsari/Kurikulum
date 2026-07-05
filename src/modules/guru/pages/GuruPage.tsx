@@ -21,9 +21,8 @@ import { EmptyState } from '../../../components/ui/EmptyState';
 const GURU_STATUS_OPTIONS = [
   { value: 'PNS', label: 'PNS' },
   { value: 'PPPK', label: 'PPPK' },
-  { value: 'GTY', label: 'GTY' },
-  { value: 'GTTY', label: 'GTTY' },
-  { value: 'Honorer', label: 'Honorer' },
+  { value: 'PPPK PW', label: 'PPPK PW' },
+  { value: 'GTT', label: 'GTT' },
 ];
 
 // ============ SORT UTILITIES ============

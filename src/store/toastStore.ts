@@ -4,6 +4,7 @@
  */
 
 import { create } from 'zustand';
+import { swal } from '../utils/alert';
 
 export type ToastVariant = 'success' | 'error' | 'warning' | 'info';
 
@@ -31,12 +32,13 @@ export const toast = {
     useToastStore.getState().addToast({ message, variant: 'warning', duration }),
   info: (message: string, duration?: number) =>
     useToastStore.getState().addToast({ message, variant: 'info', duration }),
-  confirm: (message: string, _onConfirm: () => void) =>
-    useToastStore.getState().addToast({
-      message,
-      variant: 'warning',
-      duration: 0, // persistent until dismissed
-    }),
+  confirm: (message: string, onConfirm: () => void) => {
+    swal.confirm(message).then((confirmed) => {
+      if (confirmed) {
+        onConfirm();
+      }
+    });
+  },
   remove: (id: string) => useToastStore.getState().removeToast(id),
 };
 
