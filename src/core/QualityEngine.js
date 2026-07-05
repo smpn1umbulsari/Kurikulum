@@ -43,12 +43,15 @@ export class QualityEngine {
       // 4. Run SQL RLS validation check
       const rlsReport = await this.checkSqlMigrationsRls();
 
+      // 5. Run UI design compliance check
+      const uiReport = await this.checkUiDesignCompliance();
+
       this.status = 'analyzing';
       
-      // 5. Parse detailed errors
-      const parsedErrors = this._parseErrors(lintReport, testReport, typeReport, rlsReport);
+      // 6. Parse detailed errors
+      const parsedErrors = this._parseErrors(lintReport, testReport, typeReport, rlsReport, uiReport);
 
-      const success = lintReport.success && testReport.success && typeReport.success && rlsReport.success;
+      const success = lintReport.success && testReport.success && typeReport.success && rlsReport.success && uiReport.success;
 
       this.lastReport = {
         taskId,
@@ -57,11 +60,13 @@ export class QualityEngine {
         testsPassed: testReport.success,
         typePassed: typeReport.success,
         rlsPassed: rlsReport.success,
+        uiPassed: uiReport.success,
         errors: parsedErrors,
         lintOutput: lintReport.output,
         testOutput: testReport.output,
         typeOutput: typeReport.output,
         rlsOutput: rlsReport.output,
+        uiOutput: uiReport.output,
         timestamp: new Date().toISOString()
       };
 
@@ -76,7 +81,7 @@ export class QualityEngine {
   /**
    * Parse errors from lint, test, type, and RLS reports
    */
-  _parseErrors(lintReport, testReport, typeReport, rlsReport) {
+  _parseErrors(lintReport, testReport, typeReport, rlsReport, uiReport = null) {
     const errors = [];
 
     // Parse lint errors
@@ -109,6 +114,13 @@ export class QualityEngine {
     if (rlsReport && !rlsReport.success && rlsReport.errors) {
       errors.push(...rlsReport.errors.map(err => {
         return { type: 'rls', file: err.file, message: err.message };
+      }));
+    }
+
+    // Parse UI design errors
+    if (uiReport && !uiReport.success && uiReport.errors) {
+      errors.push(...uiReport.errors.map(err => {
+        return { type: 'ui-design', file: err.file, line: err.line, message: err.message };
       }));
     }
 
@@ -516,6 +528,86 @@ export class QualityEngine {
       return meta.config || {};
     } catch (e) {
       return {};
+    }
+  }
+
+  /**
+   * Run UI/UX design anti-pattern compliance check using the impeccable script
+   * @returns {Promise<object>} UI design compliance report
+   */
+  async checkUiDesignCompliance() {
+    const scriptPath = path.join(this.projectManager.workspacePath, '.agents', 'skills', 'impeccable', 'scripts', 'detect.mjs');
+    if (!fs.existsSync(scriptPath)) {
+      return { success: true, output: 'No impeccable detector script found.', errors: [] };
+    }
+
+    try {
+      const command = `node "${scriptPath}" --json src/`;
+      const { stdout } = await execAsync(command, {
+        cwd: this.projectManager.workspacePath,
+        maxBuffer: 1024 * 1024 * 5 // 5MB buffer for large outputs
+      });
+
+      const findings = JSON.parse(stdout || '[]');
+      const errors = findings.filter(f => f.severity === 'error' || f.severity === 'warning');
+      const advisories = findings.filter(f => f.severity === 'advisory');
+
+      let output = '';
+      if (errors.length > 0) {
+        output = `❌ UI/UX Design Compliance check failed: Found ${errors.length} design issues.\n`;
+        errors.forEach((err, idx) => {
+          output += `${idx + 1}. [${err.antipattern.toUpperCase()}] ${err.file}:${err.line} - ${err.name}: ${err.description} (${err.snippet})\n`;
+        });
+      } else {
+        output = `✅ UI/UX Design Compliance check passed! All scanned files follow the design guidelines.\n`;
+      }
+      
+      if (advisories.length > 0) {
+        output += `⚠️ Advisories (${advisories.length}):\n`;
+        advisories.slice(0, 10).forEach(adv => {
+          output += `- [ADVISORY] ${adv.file}:${adv.line} - ${adv.snippet}\n`;
+        });
+      }
+
+      return {
+        success: errors.length === 0,
+        output,
+        errors: errors.map(err => ({
+          file: err.file,
+          line: err.line,
+          message: `[UI/UX ${err.antipattern}] ${err.name} - ${err.description} (${err.snippet})`
+        }))
+      };
+    } catch (error) {
+      if (error.stdout) {
+        try {
+          const findings = JSON.parse(error.stdout || '[]');
+          const errors = findings.filter(f => f.severity === 'error' || f.severity === 'warning');
+          
+          let output = `❌ UI/UX Design Compliance check failed: Found ${errors.length} design issues.\n`;
+          errors.forEach((err, idx) => {
+            output += `${idx + 1}. [${err.antipattern.toUpperCase()}] ${err.file}:${err.line} - ${err.name}: ${err.description} (${err.snippet})\n`;
+          });
+
+          return {
+            success: errors.length === 0,
+            output,
+            errors: errors.map(err => ({
+              file: err.file,
+              line: err.line,
+              message: `[UI/UX ${err.antipattern}] ${err.name} - ${err.description} (${err.snippet})`
+            }))
+          };
+        } catch (e) {
+          // If JSON parsing fails
+        }
+      }
+
+      return {
+        success: false,
+        output: 'Error running UI design compliance check: ' + error.message,
+        errors: [{ message: error.message }]
+      };
     }
   }
 

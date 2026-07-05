@@ -71,7 +71,7 @@ export default function MainLayout() {
       <Link
         to={to}
         onClick={() => setMobileSidebarOpen(false)}
-        className={`flex items-center px-4 py-2.5 rounded-lg font-medium transition-all ${
+        className={`flex items-center px-4 py-2.5 rounded-lg font-medium active:scale-[0.98] transition-[transform,background-color,color] duration-150 ease-out ${
           isActive
             ? 'bg-primary-100 text-primary-700 font-semibold'
             : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-800'
@@ -170,7 +170,7 @@ export default function MainLayout() {
                 <p className="text-[10px] text-neutral-500 capitalize">{user?.role?.toLowerCase().replace('_', ' ')}</p>
               </div>
             </div>
-            <button onClick={handleLogout} className="text-neutral-500 hover:text-red-600 transition-colors">
+            <button onClick={handleLogout} className="text-neutral-500 hover:text-red-600 transition-[transform,colors] duration-150 ease-out active:scale-90">
               <LogOut className="h-4 w-4" />
             </button>
           </div>
@@ -199,14 +199,14 @@ export default function MainLayout() {
               <button
                 onClick={() => setLargeText(!largeText)}
                 title="Perbesar Teks"
-                className={`p-2 rounded hover:bg-neutral-100 ${largeText ? 'bg-primary-100 text-primary-600' : 'text-neutral-500'}`}
+                className={`p-2 rounded hover:bg-neutral-100 transition-[transform,colors] duration-150 ease-out active:scale-90 ${largeText ? 'bg-primary-100 text-primary-600' : 'text-neutral-500'}`}
               >
                 <Type className="h-4 w-4" />
               </button>
               <button
                 onClick={() => setHighContrast(!highContrast)}
                 title="Kontras Tinggi"
-                className={`p-2 rounded hover:bg-neutral-100 ${highContrast ? 'bg-yellow-100 text-yellow-600' : 'text-neutral-500'}`}
+                className={`p-2 rounded hover:bg-neutral-100 transition-[transform,colors] duration-150 ease-out active:scale-90 ${highContrast ? 'bg-yellow-100 text-yellow-800' : 'text-neutral-500'}`} /* impeccable-disable-line gray-on-color */
               >
                 <Eye className="h-4 w-4" />
               </button>

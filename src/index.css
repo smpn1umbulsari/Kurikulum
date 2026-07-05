@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ease-ui-fast: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
 @layer base {
   html, body, #root {
     height: 100%;
@@ -27,6 +32,7 @@
   ::-webkit-scrollbar-thumb {
     background: #D1D5DB; /* Neutral 300 */
     border-radius: 4px;
+    transition: background 150ms var(--ease-ui-fast);
   }
   
   ::-webkit-scrollbar-thumb:hover {
