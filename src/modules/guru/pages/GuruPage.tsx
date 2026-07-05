@@ -16,6 +16,13 @@ import {
 } from 'lucide-react';
 import { SkeletonRow } from '../../../components/ui/SkeletonRow';
 import { EmptyState } from '../../../components/ui/EmptyState';
+import { Button } from '../../../components/ui/Button';
+import { Input } from '../../../components/ui/Input';
+import { Select } from '../../../components/ui/Select';
+import { Modal } from '../../../components/ui/Modal';
+import { FormField } from '../../../components/ui/FormField';
+import { Toolbar } from '../../../components/ui/Toolbar';
+import { KpiCard } from '../../../components/ui/KpiCard';
 
 // ============ STATUS OPTIONS ============
 const GURU_STATUS_OPTIONS = [
@@ -333,129 +340,124 @@ export default function GuruPage() {
 
         {/* KPI Badge */}
         <div className="flex gap-3">
-          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 shadow-sm flex items-center gap-3">
-            <div>
-              <p className="text-xs text-neutral-500 font-medium">Total</p>
-              <p className="text-lg font-bold text-neutral-900">{totalGuru}</p>
-            </div>
-            <Users className="h-6 w-6 text-blue-500" />
-          </div>
-          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 shadow-sm flex items-center gap-3">
-            <div>
-              <p className="text-xs text-neutral-500 font-medium">Aktif</p>
-              <p className="text-lg font-bold text-emerald-600">{aktifGuru}</p>
-            </div>
-            <CheckCircle className="h-6 w-6 text-emerald-500" />
-          </div>
-          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 shadow-sm flex items-center gap-3">
-            <div>
-              <p className="text-xs text-neutral-500 font-medium">Nonaktif</p>
-              <p className="text-lg font-bold text-neutral-400">{nonAktifGuru}</p>
-            </div>
-            <HelpCircle className="h-6 w-6 text-neutral-400" />
-          </div>
+          <KpiCard
+            label="Total"
+            value={totalGuru}
+            icon={<Users className="h-6 w-6" />}
+            variant="default"
+            className="h-[80px] p-4 gap-3"
+          />
+          <KpiCard
+            label="Aktif"
+            value={aktifGuru}
+            icon={<CheckCircle className="h-6 w-6" />}
+            variant="success"
+            className="h-[80px] p-4 gap-3"
+          />
+          <KpiCard
+            label="Nonaktif"
+            value={nonAktifGuru}
+            icon={<HelpCircle className="h-6 w-6" />}
+            variant="danger"
+            className="h-[80px] p-4 gap-3"
+          />
         </div>
       </div>
 
       {/* Toolbar */}
-      <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
-        {/* Actions Row */}
-        <div className="flex flex-wrap items-center gap-2 p-4 border-b border-neutral-100">
-          <button
-            onClick={() => openModal(null)}
-            className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-medium text-sm font-semibold transition-colors"
-          >
-            <Plus className="h-4 w-4" />
-            Tambah Guru
-          </button>
-
-          <button
-            onClick={handleDownloadTemplate}
-            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors"
-          >
-            <Download className="h-4 w-4" />
-            Template
-          </button>
-
-          <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors cursor-pointer">
-            <Upload className="h-4 w-4" />
-            Import
-            <input
-              type="file"
-              accept=".xlsx,.xls"
-              className="hidden"
-              onChange={handleExcelImport}
-              disabled={importGuruMutation.isPending}
-            />
-          </label>
-
-          <button
-            onClick={handleReset}
-            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors"
-          >
-            <RotateCcw className="h-4 w-4" />
-            Reset
-          </button>
-
-          <button
-            onClick={handleRefresh}
-            className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors"
-          >
-            <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
-            Refresh
-          </button>
-        </div>
-
-        {/* Filters Row */}
-        <div className="flex flex-wrap items-center gap-4 p-4 bg-neutral-50">
-          <div className="flex-1 min-w-[280px]">
-            <label className="flex items-center gap-2 text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-1">
-              <Search className="h-3 w-3" />
-              Pencarian
-            </label>
-            <input
-              type="text"
-              placeholder="Cari guru, kode, NIP, status, atau mapel..."
-              value={searchTerm}
-              onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
-              className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-            />
-          </div>
-
-          <div className="w-40">
-            <label className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-1">
-              Status
-            </label>
-            <select
-              value={statusFilter}
-              onChange={(e) => { setStatusFilter(e.target.value); setCurrentPage(1); }}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+      <Toolbar
+        actions={
+          <>
+            <Button
+              onClick={() => openModal(null)}
+              variant="primary"
+              leftIcon={<Plus className="h-4 w-4" />}
             >
-              <option value="">Semua</option>
-              {GURU_STATUS_OPTIONS.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          </div>
+              Tambah Guru
+            </Button>
 
-          <div className="flex items-end gap-2">
-            <span className="text-sm text-neutral-600 font-medium">
-              {filteredGurus.length} guru
-            </span>
-            <select
-              value={rowsPerPage}
-              onChange={(e) => { setRowsPerPage(Number(e.target.value)); setCurrentPage(1); }}
-              className="px-3 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+            <Button
+              onClick={handleDownloadTemplate}
+              variant="secondary"
+              leftIcon={<Download className="h-4 w-4" />}
             >
-              <option value={10}>10</option>
-              <option value={20}>20</option>
-              <option value={50}>50</option>
-              <option value={100}>100</option>
-              <option value={999999}>Semua</option>
-            </select>
-          </div>
-        </div>
-      </div>
+              Template
+            </Button>
+
+            <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors cursor-pointer active:scale-95 duration-100">
+              <Upload className="h-4 w-4" />
+              Import
+              <input
+                type="file"
+                accept=".xlsx,.xls"
+                className="hidden"
+                onChange={handleExcelImport}
+                disabled={importGuruMutation.isPending}
+              />
+            </label>
+
+            <Button
+              onClick={handleReset}
+              variant="secondary"
+              leftIcon={<RotateCcw className="h-4 w-4" />}
+            >
+              Reset
+            </Button>
+
+            <Button
+              onClick={handleRefresh}
+              variant="secondary"
+              isLoading={isLoading}
+              leftIcon={<RefreshCw className="h-4 w-4" />}
+            >
+              Refresh
+            </Button>
+          </>
+        }
+        filters={
+          <>
+            <div className="flex-1 min-w-[280px]">
+              <Input
+                label="Pencarian"
+                placeholder="Cari guru, kode, NIP, status, atau mapel..."
+                value={searchTerm}
+                onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
+                leftIcon={<Search className="h-4 w-4" />}
+              />
+            </div>
+
+            <div className="w-40">
+              <Select
+                label="Status"
+                value={statusFilter}
+                onChange={(e) => { setStatusFilter(e.target.value); setCurrentPage(1); }}
+                options={[
+                  { value: '', label: 'Semua' },
+                  ...GURU_STATUS_OPTIONS
+                ]}
+              />
+            </div>
+
+            <div className="flex items-end gap-2 h-10">
+              <span className="text-sm text-neutral-600 font-medium self-center">
+                {filteredGurus.length} guru
+              </span>
+              <Select
+                value={rowsPerPage}
+                onChange={(e) => { setRowsPerPage(Number(e.target.value)); setCurrentPage(1); }}
+                options={[
+                  { value: '10', label: '10' },
+                  { value: '20', label: '20' },
+                  { value: '50', label: '50' },
+                  { value: '100', label: '100' },
+                  { value: '999999', label: 'Semua' },
+                ]}
+                className="w-20"
+              />
+            </div>
+          </>
+        }
+      />
 
       {/* Table */}
       <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
@@ -675,206 +677,136 @@ export default function GuruPage() {
       </div>
 
       {/* Modal Form */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-          <div className="bg-white rounded-card w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-floating">
-            {/* Modal Header */}
-            <div className="relative px-6 py-5 border-b border-neutral-200 bg-gradient-to-r from-blue-50 to-white">
-              <div className="flex items-start justify-between">
-                <div>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
-                    Input Data Guru
-                  </span>
-                  <h3 className="text-xl font-bold text-neutral-900">
-                    {editingGuru ? 'Ubah Data Guru' : 'Tambah Guru Baru'}
-                  </h3>
-                  <p className="text-sm text-neutral-500 mt-1">
-                    {editingGuru
-                      ? 'Perbarui data guru dengan format yang rapi.'
-                      : 'Susun identitas guru dengan format profesional.'}
-                  </p>
-                </div>
-                <button
-                  onClick={closeModal}
-                  className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-medium transition-colors"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-              {/* Badge */}
-              <div className="absolute top-4 right-16 bg-neutral-900 text-white px-4 py-3 rounded-card text-center">
-                <p className="text-lg font-bold">7</p>
-                <p className="text-xs text-neutral-400">Field</p>
-              </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={editingGuru ? 'Ubah Data Guru' : 'Tambah Guru Baru'}
+        size="xl"
+        footer={
+          <div className="flex items-center justify-between w-full">
+            <p className="text-xs text-neutral-500 max-w-md text-left">
+              Nama pada tabel akan otomatis ditampilkan beserta gelar depan dan belakang.
+            </p>
+            <div className="flex gap-3">
+              <Button variant="secondary" onClick={closeModal}>
+                Batal
+              </Button>
+              <Button
+                variant="primary"
+                type="submit"
+                onClick={handleSubmit}
+                isLoading={saveGuruMutation.isPending}
+              >
+                Simpan Data Guru
+              </Button>
+            </div>
+          </div>
+        }
+      >
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <FormField label="Kode Guru *" error="">
+              <Input
+                type="text"
+                value={kode}
+                onChange={(e) => setKode(e.target.value.toUpperCase())}
+                placeholder="Contoh: GR-001"
+                required
+              />
+            </FormField>
+
+            <FormField label="NIP" error="">
+              <Input
+                type="text"
+                value={nip}
+                onChange={(e) => setNip(e.target.value)}
+                placeholder="19xxxxxxxxxxxxxx"
+              />
+            </FormField>
+
+            <FormField label="Status" error="">
+              <Select
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+                options={GURU_STATUS_OPTIONS}
+              />
+            </FormField>
+
+            <FormField label="Mata Pelajaran" error="">
+              <Select
+                value={mapel}
+                onChange={(e) => setMapel(e.target.value)}
+                options={[
+                  { value: '', label: 'Pilih Mapel' },
+                  ...INDUK_MAPEL_OPTIONS.map(opt => ({ value: opt.nama, label: opt.nama }))
+                ]}
+              />
+            </FormField>
+
+            <div className="col-span-2">
+              <FormField label="Nama Tanpa Gelar *" error="">
+                <Input
+                  type="text"
+                  value={nama}
+                  onChange={(e) => setNama(e.target.value)}
+                  placeholder="Masukkan nama tanpa gelar"
+                  required
+                />
+              </FormField>
             </div>
 
-            {/* Modal Body */}
-            <form onSubmit={handleSubmit} className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    Kode Guru *
-                  </label>
-                  <input
-                    type="text"
-                    value={kode}
-                    onChange={(e) => setKode(e.target.value.toUpperCase())}
-                    placeholder="Contoh: GR-001"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                    required
-                  />
-                </div>
+            <FormField label="Gelar Depan" error="">
+              <Input
+                type="text"
+                value={gelarDepan}
+                onChange={(e) => setGelarDepan(e.target.value)}
+                placeholder="Contoh: Drs."
+              />
+            </FormField>
 
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    NIP
-                  </label>
-                  <input
-                    type="text"
-                    value={nip}
-                    onChange={(e) => setNip(e.target.value)}
-                    placeholder="19xxxxxxxxxxxxxx"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
+            <FormField label="Gelar Belakang" error="">
+              <Input
+                type="text"
+                value={gelarBelakang}
+                onChange={(e) => setGelarBelakang(e.target.value)}
+                placeholder="Contoh: S.Pd."
+              />
+            </FormField>
 
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    Status
-                  </label>
-                  <select
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  >
-                    {GURU_STATUS_OPTIONS.map(opt => (
-                      <option key={opt.value} value={opt.value}>{opt.label}</option>
-                    ))}
-                  </select>
-                </div>
+            <FormField label="Jenis Kelamin" error="">
+              <Select
+                value={jk}
+                onChange={(e) => setJk(e.target.value as JenisKelamin)}
+                options={[
+                  { value: 'L', label: 'Laki-laki' },
+                  { value: 'P', label: 'Perempuan' },
+                ]}
+              />
+            </FormField>
 
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    Mata Pelajaran
-                  </label>
-                  <select
-                    value={mapel}
-                    onChange={(e) => setMapel(e.target.value)}
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  >
-                    <option value="">Pilih Mapel</option>
-                    {INDUK_MAPEL_OPTIONS.map(opt => (
-                      <option key={opt.kode} value={opt.nama}>{opt.nama}</option>
-                    ))}
-                  </select>
-                </div>
+            <FormField label="No. HP" error="">
+              <Input
+                type="text"
+                value={noHp}
+                onChange={(e) => setNoHp(e.target.value)}
+                placeholder="08xxxxxxxxxx"
+              />
+            </FormField>
 
-                <div className="form-group col-span-2">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    Nama Tanpa Gelar *
-                  </label>
-                  <input
-                    type="text"
-                    value={nama}
-                    onChange={(e) => setNama(e.target.value)}
-                    placeholder="Masukkan nama tanpa gelar"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    Gelar Depan
-                  </label>
-                  <input
-                    type="text"
-                    value={gelarDepan}
-                    onChange={(e) => setGelarDepan(e.target.value)}
-                    placeholder="Contoh: Drs."
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    Gelar Belakang
-                  </label>
-                  <input
-                    type="text"
-                    value={gelarBelakang}
-                    onChange={(e) => setGelarBelakang(e.target.value)}
-                    placeholder="Contoh: S.Pd."
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    Jenis Kelamin
-                  </label>
-                  <select
-                    value={jk}
-                    onChange={(e) => setJk(e.target.value as JenisKelamin)}
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  >
-                    <option value="L">Laki-laki</option>
-                    <option value="P">Perempuan</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label className="block text-xs font-bold uppercase text-neutral-600 tracking-wider mb-2">
-                    No. HP
-                  </label>
-                  <input
-                    type="text"
-                    value={noHp}
-                    onChange={(e) => setNoHp(e.target.value)}
-                    placeholder="08xxxxxxxxxx"
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  />
-                </div>
-
-                <div className="form-group col-span-2">
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={statusAktif}
-                      onChange={(e) => setStatusAktif(e.target.checked)}
-                      className="h-5 w-5 text-primary-600 border-neutral-300 rounded focus:ring-primary-500"
-                    />
-                    <span className="text-sm text-neutral-700">Guru aktif / masih mengajar</span>
-                  </label>
-                </div>
-              </div>
-
-              {/* Form Actions */}
-              <div className="flex items-center justify-between mt-6 pt-4 border-t border-neutral-200">
-                <p className="text-xs text-neutral-500 max-w-md">
-                  Nama pada tabel akan otomatis ditampilkan beserta gelar depan dan belakang.
-                </p>
-                <div className="flex gap-3">
-                  <button
-                    type="button"
-                    onClick={closeModal}
-                    className="px-5 py-2.5 border border-neutral-300 rounded-medium text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
-                  >
-                    Batal
-                  </button>
-                  <button
-                    type="submit"
-                    disabled={saveGuruMutation.isPending}
-                    className="px-5 py-2.5 bg-primary-600 text-white rounded-medium text-sm font-semibold hover:bg-primary-700 disabled:opacity-50 transition-colors"
-                  >
-                    {saveGuruMutation.isPending ? 'Menyimpan...' : 'Simpan Data Guru'}
-                  </button>
-                </div>
-              </div>
-            </form>
+            <div className="col-span-2 flex items-center gap-3 pt-2">
+              <label className="flex items-center gap-2 cursor-pointer text-sm text-neutral-700">
+                <input
+                  type="checkbox"
+                  checked={statusAktif}
+                  onChange={(e) => setStatusAktif(e.target.checked)}
+                  className="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500"
+                />
+                Guru aktif / masih mengajar
+              </label>
+            </div>
           </div>
-        </div>
-      )}
+        </form>
+      </Modal>
 
       {/* Preview Modal for Excel Import */}
       {isPreviewModalOpen && (

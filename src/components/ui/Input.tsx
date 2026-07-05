@@ -7,7 +7,7 @@ import { forwardRef, useId } from 'react';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  error?: string;
+  error?: string | boolean;
   helperText?: string;
   required?: boolean;
   leftIcon?: React.ReactNode;
@@ -75,7 +75,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             </div>
           )}
         </div>
-        {error && (
+        {typeof error === 'string' && error && (
           <p id={`${id}-error`} className="text-xs text-danger-500 mt-1">
             {error}
           </p>

@@ -7,7 +7,7 @@ import { forwardRef, useId } from 'react';
 
 export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
-  error?: string;
+  error?: string | boolean;
   required?: boolean;
   options: Array<{ value: string; label: string }>;
   placeholder?: string;
@@ -70,7 +70,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             </option>
           ))}
         </select>
-        {error && (
+        {typeof error === 'string' && error && (
           <p id={`${id}-error`} className="text-xs text-danger-500 mt-1">
             {error}
           </p>

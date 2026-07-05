@@ -14,6 +14,13 @@ import {
 } from 'lucide-react';
 import { SkeletonRow } from '../../../components/ui/SkeletonRow';
 import { EmptyState } from '../../../components/ui/EmptyState';
+import { Button } from '../../../components/ui/Button';
+import { Input } from '../../../components/ui/Input';
+import { Select } from '../../../components/ui/Select';
+import { Modal } from '../../../components/ui/Modal';
+import { FormField } from '../../../components/ui/FormField';
+import { Toolbar } from '../../../components/ui/Toolbar';
+import { KpiCard } from '../../../components/ui/KpiCard';
 
 const AGAMA_OPTIONS = ['Islam', 'Kristen', 'Katolik', 'Hindu', 'Buddha', 'Konghucu'];
 
@@ -215,69 +222,128 @@ export default function SiswaPage() {
           <p className="text-sm text-neutral-500">Kelola biodata peserta didik aktif sekolah.</p>
         </div>
         <div className="flex gap-3">
-          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 flex items-center gap-3">
-            <div><p className="text-xs text-neutral-500">Total</p><p className="text-lg font-bold">{totalSiswa}</p></div>
-            <Users className="h-6 w-6 text-emerald-500" />
-          </div>
-          <div className="bg-white px-4 py-2 rounded-medium border border-neutral-200 flex items-center gap-3">
-            <div><p className="text-xs text-neutral-500">Aktif</p><p className="text-lg font-bold text-emerald-600">{aktifSiswa}</p></div>
-            <CheckCircle className="h-6 w-6 text-emerald-500" />
-          </div>
+          <KpiCard
+            label="Total"
+            value={totalSiswa}
+            icon={<Users className="h-6 w-6" />}
+            variant="default"
+            className="h-[80px] p-4 gap-3"
+          />
+          <KpiCard
+            label="Aktif"
+            value={aktifSiswa}
+            icon={<CheckCircle className="h-6 w-6" />}
+            variant="success"
+            className="h-[80px] p-4 gap-3"
+          />
         </div>
       </div>
 
       {/* Toolbar */}
-      <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
-        <div className="flex flex-wrap items-center gap-2 p-4 border-b border-neutral-100">
-          <button onClick={() => openModal(null)} className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-medium text-sm font-semibold">
-            <Plus className="h-4 w-4" /> Tambah Siswa
-          </button>
-          <button onClick={handleDownloadTemplate} className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium">
-            <Download className="h-4 w-4" /> Template
-          </button>
-          <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium cursor-pointer">
-            <Upload className="h-4 w-4" /> Import
-            <input type="file" accept=".xlsx,.xls" className="hidden" onChange={handleExcelImport} />
-          </label>
-          <button onClick={handleReset} className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium">
-            <RotateCcw className="h-4 w-4" /> Reset
-          </button>
-          <button onClick={() => { refetch(); setCurrentPage(1); }} className={`flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium ${isLoading ? 'animate-spin' : ''}`}>
-            <RefreshCw className="h-4 w-4" /> Refresh
-          </button>
-        </div>
-        <div className="flex flex-wrap items-center gap-4 p-4 bg-neutral-50">
-          <div className="flex-1 min-w-[280px]">
-            <label className="flex items-center gap-2 text-xs font-semibold text-neutral-500 uppercase mb-1"><Search className="h-3 w-3" /> Pencarian</label>
-            <input type="text" placeholder="Cari nama, NISN, NIPD..." value={searchTerm}
-              onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
-              className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" />
-          </div>
-          <div className="w-36">
-            <label className="block text-xs font-semibold text-neutral-500 uppercase mb-1">Tingkat</label>
-            <select value={tingkatFilter} onChange={(e) => { setTingkatFilter(e.target.value); setCurrentPage(1); }}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-medium text-sm">
-              <option value="">Semua</option>
-              <option value="VII">VII</option><option value="VIII">VIII</option><option value="IX">IX</option>
-            </select>
-          </div>
-          <div className="w-36">
-            <label className="block text-xs font-semibold text-neutral-500 uppercase mb-1">Agama</label>
-            <select value={agamaFilter} onChange={(e) => { setAgamaFilter(e.target.value); setCurrentPage(1); }}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-medium text-sm">
-              <option value="">Semua</option>
-              {AGAMA_OPTIONS.map(opt => <option key={opt} value={opt}>{opt}</option>)}
-            </select>
-          </div>
-          <div className="flex items-end gap-2">
-            <span className="text-sm text-neutral-600 font-medium">{filteredSiswas.length} siswa</span>
-            <select value={rowsPerPage} onChange={(e) => { setRowsPerPage(Number(e.target.value)); setCurrentPage(1); }}
-              className="px-3 py-2 border border-neutral-300 rounded-medium text-sm">
-              <option value={10}>10</option><option value={20}>20</option><option value={50}>50</option><option value={100}>100</option>
-            </select>
-          </div>
-        </div>
-      </div>
+      <Toolbar
+        actions={
+          <>
+            <Button
+              onClick={() => openModal(null)}
+              variant="primary"
+              leftIcon={<Plus className="h-4 w-4" />}
+            >
+              Tambah Siswa
+            </Button>
+
+            <Button
+              onClick={handleDownloadTemplate}
+              variant="secondary"
+              leftIcon={<Download className="h-4 w-4" />}
+            >
+              Template
+            </Button>
+
+            <label className="flex items-center gap-2 px-4 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-medium text-sm font-medium transition-colors cursor-pointer active:scale-95 duration-100">
+              <Upload className="h-4 w-4" />
+              Import
+              <input
+                type="file"
+                accept=".xlsx,.xls"
+                className="hidden"
+                onChange={handleExcelImport}
+                disabled={importSiswaMutation.isPending}
+              />
+            </label>
+
+            <Button
+              onClick={handleReset}
+              variant="secondary"
+              leftIcon={<RotateCcw className="h-4 w-4" />}
+            >
+              Reset
+            </Button>
+
+            <Button
+              onClick={() => { refetch(); setCurrentPage(1); }}
+              variant="secondary"
+              isLoading={isLoading}
+              leftIcon={<RefreshCw className="h-4 w-4" />}
+            >
+              Refresh
+            </Button>
+          </>
+        }
+        filters={
+          <>
+            <div className="flex-1 min-w-[280px]">
+              <Input
+                label="Pencarian"
+                placeholder="Cari nama, NISN, NIPD..."
+                value={searchTerm}
+                onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
+                leftIcon={<Search className="h-4 w-4" />}
+              />
+            </div>
+
+            <div className="w-36">
+              <Select
+                label="Tingkat"
+                value={tingkatFilter}
+                onChange={(e) => { setTingkatFilter(e.target.value); setCurrentPage(1); }}
+                options={[
+                  { value: '', label: 'Semua' },
+                  { value: 'VII', label: 'VII' },
+                  { value: 'VIII', label: 'VIII' },
+                  { value: 'IX', label: 'IX' },
+                ]}
+              />
+            </div>
+
+            <div className="w-36">
+              <Select
+                label="Agama"
+                value={agamaFilter}
+                onChange={(e) => { setAgamaFilter(e.target.value); setCurrentPage(1); }}
+                options={[
+                  { value: '', label: 'Semua' },
+                  ...AGAMA_OPTIONS.map(opt => ({ value: opt, label: opt }))
+                ]}
+              />
+            </div>
+
+            <div className="flex items-end gap-2 h-10">
+              <span className="text-sm text-neutral-600 font-medium self-center">{filteredSiswas.length} siswa</span>
+              <Select
+                value={rowsPerPage}
+                onChange={(e) => { setRowsPerPage(Number(e.target.value)); setCurrentPage(1); }}
+                options={[
+                  { value: '10', label: '10' },
+                  { value: '20', label: '20' },
+                  { value: '50', label: '50' },
+                  { value: '100', label: '100' },
+                ]}
+                className="w-20"
+              />
+            </div>
+          </>
+        }
+      />
 
       {/* Table */}
       <div className="bg-white rounded-card border border-neutral-200 shadow-sm overflow-hidden">
@@ -346,63 +412,112 @@ export default function SiswaPage() {
       </div>
 
       {/* Modal Form */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-          <div className="w-full max-w-2xl max-h-[90vh] overflow-hidden shadow-floating">
-            <div className="px-6 py-5 border-b border-neutral-200 bg-gradient-to-r from-emerald-50 to-white">
-              <div className="flex items-start justify-between">
-                <div>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase mb-2">Input Data Siswa</span>
-                  <h3 className="text-xl font-bold">{editingSiswa ? 'Ubah Data Siswa' : 'Tambah Siswa Baru'}</h3>
-                </div>
-                <button onClick={closeModal} className="p-2 text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 rounded-medium"><X className="h-5 w-5" /></button>
-              </div>
-            </div>
-            <form onSubmit={handleSubmit} className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-              <div className="grid grid-cols-2 gap-4">
-                <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">NIPD</label>
-                  <input type="text" value={nipd} onChange={(e) => setNipd(e.target.value)} placeholder="1001"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
-                <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">NISN</label>
-                  <input type="text" value={nisn} onChange={(e) => setNisn(e.target.value)} placeholder="0123456789"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
-                <div className="col-span-2"><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Nama Lengkap *</label>
-                  <input type="text" value={nama} onChange={(e) => setNama(e.target.value)} placeholder="Nama Siswa"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" required /></div>
-                <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">JK</label>
-                  <select value={jk} onChange={(e) => setJk(e.target.value as JenisKelamin)}
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm">
-                    <option value="L">Laki-laki</option><option value="P">Perempuan</option>
-                  </select></div>
-                <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Agama</label>
-                  <select value={agama} onChange={(e) => setAgama(e.target.value)}
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm">
-                    <option value="">Pilih</option>
-                    {AGAMA_OPTIONS.map(o => <option key={o} value={o}>{o}</option>)}
-                  </select></div>
-                <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Tempat Lahir</label>
-                  <input type="text" value={tempatLahir} onChange={(e) => setTempatLahir(e.target.value)} placeholder="Jakarta"
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
-                <div><label className="block text-xs font-bold uppercase text-neutral-600 mb-1">Tanggal Lahir</label>
-                  <input type="date" value={tanggalLahir} onChange={(e) => setTanggalLahir(e.target.value)}
-                    className="w-full px-4 py-2 border border-neutral-300 rounded-medium text-sm" /></div>
-
-                <div className="col-span-2">
-                  <label className="flex items-center gap-2"><input type="checkbox" checked={statusAktif} onChange={(e) => setStatusAktif(e.target.checked)} className="h-4 w-4" />
-                    <span className="text-sm">Siswa aktif</span></label>
-                </div>
-              </div>
-              <div className="flex justify-end gap-3 mt-6 pt-4 border-t">
-                <button type="button" onClick={closeModal} className="px-4 py-2 border border-neutral-300 rounded-medium text-sm">Batal</button>
-                <button type="submit" disabled={saveSiswaMutation.isPending}
-                  className="px-4 py-2 bg-primary-600 text-white rounded-medium text-sm font-semibold disabled:opacity-50">
-                  {saveSiswaMutation.isPending ? 'Menyimpan...' : 'Simpan'}
-                </button>
-              </div>
-            </form>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={editingSiswa ? 'Ubah Data Siswa' : 'Tambah Siswa Baru'}
+        size="xl"
+        footer={
+          <div className="flex justify-end gap-3 w-full">
+            <Button variant="secondary" onClick={closeModal}>
+              Batal
+            </Button>
+            <Button
+              variant="primary"
+              type="submit"
+              onClick={handleSubmit}
+              isLoading={saveSiswaMutation.isPending}
+            >
+              Simpan
+            </Button>
           </div>
-        </div>
-      )}
+        }
+      >
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <FormField label="NIPD" error="">
+              <Input
+                type="text"
+                value={nipd}
+                onChange={(e) => setNipd(e.target.value)}
+                placeholder="1001"
+              />
+            </FormField>
+
+            <FormField label="NISN" error="">
+              <Input
+                type="text"
+                value={nisn}
+                onChange={(e) => setNisn(e.target.value)}
+                placeholder="0123456789"
+              />
+            </FormField>
+
+            <div className="col-span-2">
+              <FormField label="Nama Lengkap *" error="">
+                <Input
+                  type="text"
+                  value={nama}
+                  onChange={(e) => setNama(e.target.value)}
+                  placeholder="Nama Siswa"
+                  required
+                />
+              </FormField>
+            </div>
+
+            <FormField label="JK" error="">
+              <Select
+                value={jk}
+                onChange={(e) => setJk(e.target.value as JenisKelamin)}
+                options={[
+                  { value: 'L', label: 'Laki-laki' },
+                  { value: 'P', label: 'Perempuan' },
+                ]}
+              />
+            </FormField>
+
+            <FormField label="Agama" error="">
+              <Select
+                value={agama}
+                onChange={(e) => setAgama(e.target.value)}
+                options={[
+                  { value: '', label: 'Pilih' },
+                  ...AGAMA_OPTIONS.map(o => ({ value: o, label: o }))
+                ]}
+              />
+            </FormField>
+
+            <FormField label="Tempat Lahir" error="">
+              <Input
+                type="text"
+                value={tempatLahir}
+                onChange={(e) => setTempatLahir(e.target.value)}
+                placeholder="Jakarta"
+              />
+            </FormField>
+
+            <FormField label="Tanggal Lahir" error="">
+              <Input
+                type="date"
+                value={tanggalLahir}
+                onChange={(e) => setTanggalLahir(e.target.value)}
+              />
+            </FormField>
+
+            <div className="col-span-2 flex items-center gap-2 pt-2">
+              <label className="flex items-center gap-2 cursor-pointer text-sm text-neutral-700">
+                <input
+                  type="checkbox"
+                  checked={statusAktif}
+                  onChange={(e) => setStatusAktif(e.target.checked)}
+                  className="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500"
+                />
+                Siswa aktif
+              </label>
+            </div>
+          </div>
+        </form>
+      </Modal>
 
       {/* Preview Modal */}
       {isPreviewModalOpen && (

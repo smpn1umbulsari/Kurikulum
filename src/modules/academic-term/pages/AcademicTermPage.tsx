@@ -15,13 +15,44 @@ import { FormField } from '../../../components/ui/FormField';
 import { Modal } from '../../../components/ui/Modal';
 import { KpiCard } from '../../../components/ui/KpiCard';
 
+const datePreprocess = z.preprocess((val: any) => {
+  if (typeof val !== 'string') return val;
+  if (val.includes('/')) {
+    const parts = val.split('/');
+    if (parts.length === 3) {
+      const [p1, p2, p3] = parts;
+      if (p3.length === 4) {
+        const year = p3;
+        let month = p1;
+        let day = p2;
+        if (parseInt(p1) > 12) {
+          month = p2;
+          day = p1;
+        } else if (parseInt(p2) > 12) {
+          month = p1;
+          day = p2;
+        } else {
+          month = p1;
+          day = p2;
+        }
+        return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+      }
+    }
+  }
+  return val;
+}, z.string()) as unknown as z.ZodType<string>;
+
 const academicTermSchema = z.object({
   tahun_ajaran: z.string().regex(/^\d{4}\/\d{4}$/, 'Format Tahun Ajaran harus YYYY/YYYY (contoh: 2025/2026)'),
   semester: z.enum(['GANJIL', 'GENAP'] as const, {
     errorMap: () => ({ message: 'Pilih Semester' }),
   }),
-  tanggal_mulai: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Format tanggal harus YYYY-MM-DD'),
-  tanggal_selesai: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Format tanggal harus YYYY-MM-DD'),
+  tanggal_mulai: datePreprocess.refine((val) => /^\d{4}-\d{2}-\d{2}$/.test(val), {
+    message: 'Format tanggal harus YYYY-MM-DD',
+  }),
+  tanggal_selesai: datePreprocess.refine((val) => /^\d{4}-\d{2}-\d{2}$/.test(val), {
+    message: 'Format tanggal harus YYYY-MM-DD',
+  }),
   status: z.boolean().default(false),
 });
 
@@ -256,8 +287,8 @@ export default function AcademicTermPage() {
             </FormField>
           </div>
 
-          <FormField>
-            <label className="flex items-center gap-2 text-sm text-neutral-700">
+          <div className="flex items-center gap-2 text-sm text-neutral-700 pt-2">
+            <label className="flex items-center gap-2 text-sm text-neutral-700 cursor-pointer">
               <input
                 type="checkbox"
                 {...register('status')}
@@ -265,7 +296,7 @@ export default function AcademicTermPage() {
               />
               Aktifkan Semester Ini Langsung
             </label>
-          </FormField>
+          </div>
         </form>
       </Modal>
     </div>

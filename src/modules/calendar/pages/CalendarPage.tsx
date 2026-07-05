@@ -164,7 +164,7 @@ export default function CalendarPage() {
   const dayCache = useMemo(() => {
     const cache: Record<string, {
       display_text: string;
-      class_name: 'sunday' | 'holiday' | 'exam' | 'school_event' | 'break' | 'effective' | 'weekend';
+      class_name: 'sunday' | 'holiday' | 'exam' | 'school_event' | 'break' | 'effective' | 'weekend' | 'outside_term';
       is_hari_efektif: boolean;
       event_nama?: string;
       event?: AcademicCalendarEvent;
@@ -173,6 +173,12 @@ export default function CalendarPage() {
     const baseTerm = ganjilTerm || currentTerm;
     const startYear = baseTerm ? new Date(baseTerm.tanggal_mulai).getFullYear() : currentDate.getFullYear();
     const months = activeSemesterTab === 'ganjil' ? [6, 7, 8, 9, 10, 11] : [0, 1, 2, 3, 4, 5];
+
+    const activeTerm = activeSemesterTab === 'ganjil' ? ganjilTerm : genapTerm;
+    const termStart = activeTerm ? new Date(activeTerm.tanggal_mulai.split('T')[0]) : null;
+    const termEnd = activeTerm ? new Date(activeTerm.tanggal_selesai.split('T')[0]) : null;
+    if (termStart) termStart.setHours(0, 0, 0, 0);
+    if (termEnd) termEnd.setHours(0, 0, 0, 0);
 
     let counter = 0;
 
@@ -183,14 +189,22 @@ export default function CalendarPage() {
 
       for (let d = 1; d <= totalDaysInMonth; d++) {
         const dateObj = new Date(yr, m, d);
+        dateObj.setHours(0, 0, 0, 0);
         const dateStr = `${yr}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
         const dayOfWeek = dateObj.getDay();
         const isSun = dayOfWeek === 0;
         const isSat = dayOfWeek === 6;
 
+        const isOutside = (termStart && dateObj < termStart) || (termEnd && dateObj > termEnd);
         const matchingEvent = events.find(e => e.date === dateStr && e.is_active);
 
-        if (isSun) {
+        if (isOutside) {
+          cache[dateStr] = {
+            display_text: '-',
+            class_name: 'outside_term',
+            is_hari_efektif: false,
+          };
+        } else if (isSun) {
           cache[dateStr] = {
             display_text: 'Mgg',
             class_name: 'sunday',
@@ -208,7 +222,7 @@ export default function CalendarPage() {
           };
         } else if (matchingEvent) {
           let disp = 'EVT';
-          let cls: 'holiday' | 'exam' | 'school_event' | 'break' | 'effective' = 'school_event';
+          let cls: 'holiday' | 'exam' | 'school_event' | 'break' | 'effective' | 'outside_term' = 'school_event';
           let isEfektif = false;
 
           if (matchingEvent.type === 'national_holiday') {
@@ -518,19 +532,28 @@ export default function CalendarPage() {
                             const day = dayIdx + 1;
                             const dateStr = `${yr}-${String(mIdx + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
                             
-                            const isDead = isDeadDate(mIdx, day, yr);
+                            const activeTerm = activeSemesterTab === 'ganjil' ? ganjilTerm : genapTerm;
+                            const termStart = activeTerm ? new Date(activeTerm.tanggal_mulai.split('T')[0]) : null;
+                            const termEnd = activeTerm ? new Date(activeTerm.tanggal_selesai.split('T')[0]) : null;
+                            if (termStart) termStart.setHours(0, 0, 0, 0);
+                            if (termEnd) termEnd.setHours(0, 0, 0, 0);
+
+                            const dateObj = new Date(yr, mIdx, day);
+                            dateObj.setHours(0, 0, 0, 0);
+                            const isOutside = (termStart && dateObj < termStart) || (termEnd && dateObj > termEnd);
+                            const isDead = isDeadDate(mIdx, day, yr) || isOutside;
+
                             if (isDead) {
                               return (
                                 <td 
                                   key={dayIdx} 
                                   className="p-1 border bg-neutral-200 bg-[linear-gradient(45deg,#e5e5e5_25%,transparent_25%,transparent_50%,#e5e5e5_50%,#e5e5e5_75%,transparent_75%,transparent)] bg-[length:10px_10px] opacity-60 cursor-not-allowed border-neutral-100" 
-                                  title="Tanggal Mati"
+                                  title={isOutside ? "Di luar Semester Aktif" : "Tanggal Mati"}
                                 />
                               );
                             }
 
                             const cachedDay = dayCache[dateStr];
-                            const dateObj = new Date(yr, mIdx, day);
                             const dayOfWeek = dateObj.getDay();
                             const isSun = dayOfWeek === 0;
                             const isSat = dayOfWeek === 6;
