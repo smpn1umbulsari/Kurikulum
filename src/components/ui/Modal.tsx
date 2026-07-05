@@ -130,7 +130,7 @@ export function Modal({
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
-        className={`bg-white rounded-card shadow-floating border border-neutral-200 ${sizeClasses[size]} w-full overflow-hidden`}
+        className={`bg-white rounded-card shadow-floating border border-neutral-200 animate-modal-in ${sizeClasses[size]} w-full overflow-hidden`}
         tabIndex={-1}
       >
         {/* Header */}
