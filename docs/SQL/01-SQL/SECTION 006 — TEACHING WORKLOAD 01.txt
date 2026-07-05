@@ -1,0 +1,34 @@
+/* =========================================================
+   SECTION 006 - TEACHING WORKLOAD
+   ========================================================= */
+
+CREATE TABLE IF NOT EXISTS pembagian_mengajar (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    academic_term_id UUID NOT NULL
+        REFERENCES academic_terms(id),
+
+    guru_id UUID NOT NULL
+        REFERENCES gurus(id),
+
+    mapel_id UUID NOT NULL
+        REFERENCES mata_pelajarans(id),
+
+    kelas_id UUID NOT NULL
+        REFERENCES kelas(id),
+
+    jenis kelas_jenis NOT NULL,
+
+    jp NUMERIC(5,2) NOT NULL,
+
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+
+    UNIQUE(
+        academic_term_id,
+        guru_id,
+        mapel_id,
+        kelas_id,
+        jenis
+    )
+);

@@ -1,0 +1,18 @@
+{
+  "name": "qa-engineer",
+  "description": "QA - read-only access to code, write to test files",
+  "permissions": {
+    "read": [
+      "src/**",
+      "docs/**"
+    ],
+    "write": [
+      "src/tests/**",
+      "docs/**"
+    ],
+    "deny": [
+      ".env",
+      "**/secrets/**"
+    ]
+  }
+}

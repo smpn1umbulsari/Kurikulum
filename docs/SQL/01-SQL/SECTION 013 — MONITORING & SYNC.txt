@@ -1,0 +1,132 @@
+/* =========================================================
+   SECTION 013 - MONITORING & SYNC
+   ========================================================= */
+
+CREATE TABLE IF NOT EXISTS audit_logs (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    table_name TEXT NOT NULL,
+
+    record_id UUID NOT NULL,
+
+    action TEXT NOT NULL,
+
+    old_data JSONB,
+
+    new_data JSONB,
+
+    user_id UUID,
+
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS soft_delete_logs (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    table_name TEXT NOT NULL,
+
+    record_id UUID NOT NULL,
+
+    deleted_by UUID,
+
+    deleted_at TIMESTAMPTZ,
+
+    restored_by UUID,
+
+    restored_at TIMESTAMPTZ
+);
+
+CREATE TABLE IF NOT EXISTS sync_queue (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    table_name VARCHAR(100) NOT NULL,
+
+    record_id UUID NOT NULL,
+
+    operation operation_type NOT NULL,
+
+    payload JSONB NOT NULL,
+
+    status sync_status NOT NULL DEFAULT 'PENDING',
+
+    retry_count INTEGER DEFAULT 0,
+
+    last_error TEXT,
+
+    next_retry_at TIMESTAMPTZ,
+
+    created_at TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS conflict_queue (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    table_name VARCHAR(100) NOT NULL,
+
+    record_id UUID NOT NULL,
+
+    local_data JSONB NOT NULL,
+
+    cloud_data JSONB NOT NULL,
+
+    resolved BOOLEAN DEFAULT FALSE,
+
+    resolved_by UUID,
+
+    resolved_at TIMESTAMPTZ,
+
+    created_at TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS sync_metadata (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    last_sync_at TIMESTAMPTZ,
+
+    last_success_sync_at TIMESTAMPTZ,
+
+    device_id VARCHAR(100),
+
+    app_version VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS sync_logs (
+
+    id BIGSERIAL PRIMARY KEY,
+
+    user_id UUID,
+
+    device_id VARCHAR(100),
+
+    action VARCHAR(100),
+
+    status VARCHAR(50),
+
+    message TEXT,
+
+    created_at TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS device_health (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    user_id UUID,
+
+    device_id TEXT,
+
+    app_version TEXT,
+
+    last_sync_at TIMESTAMPTZ,
+
+    queue_count INTEGER DEFAULT 0,
+
+    conflict_count INTEGER DEFAULT 0,
+
+    status TEXT
+);

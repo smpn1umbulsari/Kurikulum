@@ -1,0 +1,29 @@
+CREATE INDEX IF NOT EXISTS idx_siswa_nisn ON siswas(nisn);
+CREATE INDEX IF NOT EXISTS idx_siswa_nama ON siswas(nama);
+CREATE INDEX IF NOT EXISTS idx_guru_nip ON gurus(nip);
+CREATE INDEX IF NOT EXISTS idx_guru_nama ON gurus(nama);
+CREATE INDEX IF NOT EXISTS idx_kelas_term ON kelas(academic_term_id);
+CREATE INDEX IF NOT EXISTS idx_kelas_wali ON kelas(wali_kelas_id);
+CREATE INDEX IF NOT EXISTS idx_mengajar_guru ON pembagian_mengajar(guru_id);
+CREATE INDEX IF NOT EXISTS idx_mengajar_kelas ON pembagian_mengajar(kelas_id);
+CREATE INDEX IF NOT EXISTS idx_mengajar_term ON pembagian_mengajar(academic_term_id);
+CREATE INDEX IF NOT EXISTS idx_assessment_term ON assessments(academic_term_id);
+CREATE INDEX IF NOT EXISTS idx_assessment_mengajar ON assessments(pembagian_mengajar_id);
+CREATE INDEX IF NOT EXISTS idx_assessment_detail_assessment ON assessment_details(assessment_id);
+CREATE INDEX IF NOT EXISTS idx_assessment_detail_siswa ON assessment_details(siswa_id);
+CREATE INDEX IF NOT EXISTS idx_kehadiran_siswa ON kehadiran(siswa_id);
+CREATE INDEX IF NOT EXISTS idx_kehadiran_tanggal ON kehadiran(tanggal);
+CREATE INDEX IF NOT EXISTS idx_rapor_siswa ON rapor_snapshots(siswa_id);
+CREATE INDEX IF NOT EXISTS idx_alumni_nama ON alumni(nama);
+CREATE INDEX IF NOT EXISTS idx_alumni_tahun ON alumni(tahun_lulus);
+-- Phase 2: Master Data Indexes
+CREATE INDEX IF NOT EXISTS idx_mapel_kode ON mata_pelajarans(kode);
+CREATE INDEX IF NOT EXISTS idx_mapel_nama ON mata_pelajarans(nama);
+CREATE INDEX IF NOT EXISTS idx_term_status ON academic_terms(status);
+CREATE INDEX IF NOT EXISTS idx_term_finalized ON academic_terms(finalized);
+CREATE INDEX IF NOT EXISTS idx_tugas_type_kode ON tugas_tambahan_types(kode);
+CREATE INDEX IF NOT EXISTS idx_riwayat_siswa ON riwayat_kelas(siswa_id);
+CREATE INDEX IF NOT EXISTS idx_riwayat_term ON riwayat_kelas(academic_term_id);
+CREATE INDEX IF NOT EXISTS idx_mutasi_siswa ON mutasi_siswa(siswa_id);
+CREATE INDEX IF NOT EXISTS idx_mutasi_term ON mutasi_siswa(academic_term_id);
+

@@ -1,0 +1,17 @@
+{
+  "name": "AETHER Platform",
+  "version": "1.1.0",
+  "lastAudit": null,
+  "reports": [],
+  "compliance": {
+    "autoEnforce": true,
+    "requireGapReport": true,
+    "blockOnMismatch": false,
+    "auditSchedule": "daily"
+  },
+  "notifications": {
+    "onFailure": true,
+    "onWarning": true,
+    "channels": ["console", "eventbus"]
+  }
+}

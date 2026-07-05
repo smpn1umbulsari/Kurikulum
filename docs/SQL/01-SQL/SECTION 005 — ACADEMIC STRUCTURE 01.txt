@@ -1,0 +1,28 @@
+/* =========================================================
+   SECTION 005 - ACADEMIC STRUCTURE
+   ========================================================= */
+
+CREATE TABLE IF NOT EXISTS academic_terms (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    tahun_ajaran VARCHAR(20) NOT NULL,
+
+    semester semester_type NOT NULL,
+
+    tanggal_mulai DATE NOT NULL,
+    tanggal_selesai DATE NOT NULL,
+
+    status BOOLEAN NOT NULL DEFAULT FALSE,
+
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+
+    UNIQUE(
+        tahun_ajaran,
+        semester
+    )
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS uq_active_term
+ON academic_terms(status)
+WHERE status = TRUE;

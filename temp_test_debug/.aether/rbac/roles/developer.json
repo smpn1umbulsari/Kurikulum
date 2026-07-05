@@ -1,0 +1,18 @@
+{
+  "name": "developer",
+  "description": "Developer - can read all, write to assigned modules only",
+  "permissions": {
+    "read": [
+      "**/*"
+    ],
+    "write": [
+      "src/**",
+      "tests/**"
+    ],
+    "deny": [
+      "supabase/migrations/**",
+      ".env",
+      "**/secrets/**"
+    ]
+  }
+}

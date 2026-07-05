@@ -1,0 +1,323 @@
+{
+  "workflowId": "default",
+  "taskFilePath": "D:\\KURIKULUM\\00 Final Kurikulum\\tasks\\sikad-hybrid-integration.md",
+  "status": "completed",
+  "currentTaskIndex": 0,
+  "tasks": [
+    {
+      "index": 5,
+      "indent": 0,
+      "status": "completed",
+      "text": "Pasang SheetJS (`xlsx`) library di SIKAD v4.0",
+      "lineText": "- [x] Pasang SheetJS (`xlsx`) library di SIKAD v4.0"
+    },
+    {
+      "index": 6,
+      "indent": 0,
+      "status": "completed",
+      "text": "Modifikasi GuruPage.tsx untuk preview konflik 5-status (BARU/PERBARUI/IDENTIK/BENTROK/TIDAK VALID)",
+      "lineText": "- [x] Modifikasi GuruPage.tsx untuk preview konflik 5-status (BARU/PERBARUI/IDENTIK/BENTROK/TIDAK VALID)"
+    },
+    {
+      "index": 7,
+      "indent": 0,
+      "status": "completed",
+      "text": "Modifikasi SiswaPage.tsx untuk preview konflik 5-status",
+      "lineText": "- [x] Modifikasi SiswaPage.tsx untuk preview konflik 5-status"
+    },
+    {
+      "index": 8,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan pagination dan pilihan mode import (Update/Skip/Overwrite)",
+      "lineText": "- [x] Implementasikan pagination dan pilihan mode import (Update/Skip/Overwrite)"
+    },
+    {
+      "index": 9,
+      "indent": 0,
+      "status": "completed",
+      "text": "Test import dengan sample data Excel",
+      "lineText": "- [x] Test import dengan sample data Excel"
+    },
+    {
+      "index": 12,
+      "indent": 0,
+      "status": "completed",
+      "text": "Buat tabel `academic_calendar_events` di Dexie schema.ts",
+      "lineText": "- [x] Buat tabel `academic_calendar_events` di Dexie schema.ts"
+    },
+    {
+      "index": 13,
+      "indent": 0,
+      "status": "completed",
+      "text": "Buat tabel `academic_calendar_events` di Supabase migration",
+      "lineText": "- [x] Buat tabel `academic_calendar_events` di Supabase migration"
+    },
+    {
+      "index": 14,
+      "indent": 0,
+      "status": "completed",
+      "text": "Porting komponen CalendarView.tsx ke src/modules/calendar/pages/CalendarPage.tsx",
+      "lineText": "- [x] Porting komponen CalendarView.tsx ke src/modules/calendar/pages/CalendarPage.tsx"
+    },
+    {
+      "index": 15,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan algoritma auto-RPE berdasarkan event kalender",
+      "lineText": "- [x] Implementasikan algoritma auto-RPE berdasarkan event kalender"
+    },
+    {
+      "index": 16,
+      "indent": 0,
+      "status": "completed",
+      "text": "Ganti AcademicTermPage.tsx dengan CalendarPage.tsx yang interaktif",
+      "lineText": "- [x] Ganti AcademicTermPage.tsx dengan CalendarPage.tsx yang interaktif"
+    },
+    {
+      "index": 19,
+      "indent": 0,
+      "status": "completed",
+      "text": "Buat tabel `assessment_rooms` di schema database",
+      "lineText": "- [x] Buat tabel `assessment_rooms` di schema database"
+    },
+    {
+      "index": 20,
+      "indent": 0,
+      "status": "completed",
+      "text": "Buat tabel `assessment_seats` di schema database",
+      "lineText": "- [x] Buat tabel `assessment_seats` di schema database"
+    },
+    {
+      "index": 21,
+      "indent": 0,
+      "status": "completed",
+      "text": "Buat tabel `assessment_supervisors` di schema database",
+      "lineText": "- [x] Buat tabel `assessment_supervisors` di schema database"
+    },
+    {
+      "index": 22,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan UI pembagian ruang ujian interaktif (RoomManagementPage.tsx)",
+      "lineText": "- [x] Implementasikan UI pembagian ruang ujian interaktif (RoomManagementPage.tsx)"
+    },
+    {
+      "index": 23,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan penjadwalan pengawas bebas bentrok (SupervisorSchedulePage.tsx)",
+      "lineText": "- [x] Implementasikan penjadwalan pengawas bebas bentrok (SupervisorSchedulePage.tsx)"
+    },
+    {
+      "index": 24,
+      "indent": 0,
+      "status": "completed",
+      "text": "Terapkan layout cetak kartu ujian (format kartu peserta)",
+      "lineText": "- [x] Terapkan layout cetak kartu ujian (format kartu peserta)"
+    },
+    {
+      "index": 25,
+      "indent": 0,
+      "status": "completed",
+      "text": "Terapkan layout cetak label meja (format 121)",
+      "lineText": "- [x] Terapkan layout cetak label meja (format 121)"
+    },
+    {
+      "index": 28,
+      "indent": 0,
+      "status": "completed",
+      "text": "Hubungkan fungsi ekspor ke Google Drive melalui HTTP API (googleDriveService.ts)",
+      "lineText": "- [x] Hubungkan fungsi ekspor ke Google Drive melalui HTTP API (googleDriveService.ts)"
+    },
+    {
+      "index": 29,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan integrasi Google Apps Script untuk dokumen kepengawasan",
+      "lineText": "- [x] Implementasikan integrasi Google Apps Script untuk dokumen kepengawasan"
+    },
+    {
+      "index": 30,
+      "indent": 0,
+      "status": "completed",
+      "text": "Test koneksi dan validasi autentikasi",
+      "lineText": "- [x] Test koneksi dan validasi autentikasi"
+    },
+    {
+      "index": 33,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan halaman Naik Kelas massal (MutasiSiswaPage.tsx)",
+      "lineText": "- [x] Implementasikan halaman Naik Kelas massal (MutasiSiswaPage.tsx)"
+    },
+    {
+      "index": 34,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan halaman Kelulusan massal",
+      "lineText": "- [x] Implementasikan halaman Kelulusan massal"
+    },
+    {
+      "index": 35,
+      "indent": 0,
+      "status": "completed",
+      "text": "Porting logika rombel bayangan dari Guru Spenturi (rombelService.ts)",
+      "lineText": "- [x] Porting logika rombel bayangan dari Guru Spenturi (rombelService.ts)"
+    },
+    {
+      "index": 36,
+      "indent": 0,
+      "status": "completed",
+      "text": "Implementasikan alur mutasi siswa (Pindah, Drop Out)",
+      "lineText": "- [x] Implementasikan alur mutasi siswa (Pindah, Drop Out)"
+    }
+  ],
+  "history": [
+    {
+      "action": "initialize",
+      "message": "Workflow 'default' initialized with 24 tasks.",
+      "timestamp": "2026-06-27T15:45:37.895Z"
+    },
+    {
+      "action": "transition",
+      "message": "First task set to in progress: \"Pasang SheetJS (`xlsx`) library di SIKAD v4.0\"",
+      "timestamp": "2026-06-27T15:45:37.897Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Pasang SheetJS (`xlsx`) library di SIKAD v4.0\"",
+      "timestamp": "2026-06-27T16:02:38.014Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Modifikasi GuruPage.tsx untuk preview konflik 5-status (BARU/PERBARUI/IDENTIK/BENTROK/TIDAK VALID)\"",
+      "timestamp": "2026-06-27T16:02:38.015Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Modifikasi GuruPage.tsx untuk preview konflik 5-status (BARU/PERBARUI/IDENTIK/BENTROK/TIDAK VALID)\"",
+      "timestamp": "2026-06-27T16:08:14.538Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Modifikasi SiswaPage.tsx untuk preview konflik 5-status\"",
+      "timestamp": "2026-06-27T16:08:14.539Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Modifikasi SiswaPage.tsx untuk preview konflik 5-status\"",
+      "timestamp": "2026-06-27T16:09:04.071Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Implementasikan pagination dan pilihan mode import (Update/Skip/Overwrite)\"",
+      "timestamp": "2026-06-27T16:09:04.073Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Implementasikan pagination dan pilihan mode import (Update/Skip/Overwrite)\"",
+      "timestamp": "2026-06-27T16:09:04.192Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Test import dengan sample data Excel\"",
+      "timestamp": "2026-06-27T16:09:04.194Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Test import dengan sample data Excel\"",
+      "timestamp": "2026-06-27T16:09:04.318Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Buat tabel `academic_calendar_events` di Dexie schema.ts\"",
+      "timestamp": "2026-06-27T16:09:04.319Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Buat tabel `academic_calendar_events` di Dexie schema.ts\"",
+      "timestamp": "2026-06-27T16:09:04.445Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Buat tabel `academic_calendar_events` di Supabase migration\"",
+      "timestamp": "2026-06-27T16:09:04.447Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Buat tabel `academic_calendar_events` di Supabase migration\"",
+      "timestamp": "2026-06-27T16:09:04.564Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Porting komponen CalendarView.tsx ke src/modules/calendar/pages/CalendarPage.tsx\"",
+      "timestamp": "2026-06-27T16:09:04.565Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Porting komponen CalendarView.tsx ke src/modules/calendar/pages/CalendarPage.tsx\"",
+      "timestamp": "2026-06-27T16:12:25.297Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Implementasikan algoritma auto-RPE berdasarkan event kalender\"",
+      "timestamp": "2026-06-27T16:12:25.299Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Implementasikan algoritma auto-RPE berdasarkan event kalender\"",
+      "timestamp": "2026-06-27T16:12:25.408Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Ganti AcademicTermPage.tsx dengan CalendarPage.tsx yang interaktif\"",
+      "timestamp": "2026-06-27T16:12:25.410Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Ganti AcademicTermPage.tsx dengan CalendarPage.tsx yang interaktif\"",
+      "timestamp": "2026-06-27T16:12:25.531Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Buat tabel `assessment_rooms` di schema database\"",
+      "timestamp": "2026-06-27T16:12:25.533Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Buat tabel `assessment_rooms` di schema database\"",
+      "timestamp": "2026-06-27T16:12:25.646Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Buat tabel `assessment_seats` di schema database\"",
+      "timestamp": "2026-06-27T16:12:25.648Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Buat tabel `assessment_seats` di schema database\"",
+      "timestamp": "2026-06-27T16:12:25.763Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Buat tabel `assessment_supervisors` di schema database\"",
+      "timestamp": "2026-06-27T16:12:25.765Z"
+    },
+    {
+      "action": "task_completed",
+      "message": "Task completed: \"Buat tabel `assessment_supervisors` di schema database\"",
+      "timestamp": "2026-06-27T16:12:36.453Z"
+    },
+    {
+      "action": "transition",
+      "message": "Transitioned to next task: \"Implementasikan UI pembagian ruang ujian interaktif\"",
+      "timestamp": "2026-06-27T16:12:36.455Z"
+    },
+    {
+      "action": "completed",
+      "message": "All tasks completed. Workflow finished.",
+      "timestamp": "2026-06-27T21:19:13.117Z"
+    }
+  ]
+}

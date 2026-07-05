@@ -1,0 +1,11 @@
+{
+  "name": "security-auditor",
+  "description": "Security Auditor - read-only access for auditing",
+  "permissions": {
+    "read": [
+      "**/*"
+    ],
+    "write": [],
+    "deny": []
+  }
+}

@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS roles (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    kode VARCHAR(50) NOT NULL UNIQUE,
+    nama VARCHAR(100) NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);

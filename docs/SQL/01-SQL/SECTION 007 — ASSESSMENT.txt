@@ -1,0 +1,88 @@
+/* =========================================================
+   SECTION 007 - ASSESSMENT
+   ========================================================= */
+
+CREATE TABLE IF NOT EXISTS assessment_types (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    kode VARCHAR(50) NOT NULL UNIQUE,
+
+    nama VARCHAR(100) NOT NULL,
+
+    kategori VARCHAR(50),
+
+    bobot_default NUMERIC(5,2) NOT NULL DEFAULT 0,
+
+    urutan SMALLINT DEFAULT 0,
+
+    aktif BOOLEAN NOT NULL DEFAULT TRUE,
+
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS assessments (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    assessment_type_id UUID NOT NULL
+        REFERENCES assessment_types(id),
+
+    pembagian_mengajar_id UUID NOT NULL
+        REFERENCES pembagian_mengajar(id),
+
+    academic_term_id UUID NOT NULL
+        REFERENCES academic_terms(id),
+
+    judul VARCHAR(200) NOT NULL,
+
+    deskripsi TEXT,
+
+    tanggal DATE NOT NULL,
+
+    bobot NUMERIC(5,2) NOT NULL
+        CHECK (
+            bobot >= 0
+            AND bobot <= 100
+        ),
+
+    stage assessment_stage NOT NULL
+        DEFAULT 'DRAFT',
+
+    created_by UUID NOT NULL
+        REFERENCES gurus(id),
+
+    version BIGINT NOT NULL DEFAULT 1,
+
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS assessment_details (
+
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    assessment_id UUID NOT NULL
+        REFERENCES assessments(id)
+        ON DELETE CASCADE,
+
+    siswa_id UUID NOT NULL
+        REFERENCES siswas(id),
+
+    nilai NUMERIC(5,2)
+        CHECK (
+            nilai >= 0
+            AND nilai <= 100
+        ),
+
+    catatan TEXT,
+
+    version BIGINT NOT NULL DEFAULT 1,
+
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+
+    UNIQUE(
+        assessment_id,
+        siswa_id
+    )
+);

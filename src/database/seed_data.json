@@ -1,0 +1,3929 @@
+{
+  "academicTerms": [
+    {
+      "id": "2026-2027-ganjil",
+      "tahun_ajaran": "2026/2027",
+      "semester": "GANJIL",
+      "tanggal_mulai": "2026-07-13T00:00:00Z",
+      "tanggal_selesai": "2026-12-18T00:00:00Z",
+      "status": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    }
+  ],
+  "gurus": [
+    {
+      "id": "MamiS",
+      "nip": "196606011990032010",
+      "nama": "Dra Mamik Sasmiati, M.Pd",
+      "gelar_depan": "Dra",
+      "gelar_belakang": "M.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "AgusB",
+      "nip": "196604122007011031",
+      "nama": "Drs. Agus Bambang Santoso",
+      "gelar_depan": "Drs.",
+      "gelar_belakang": null,
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Solek",
+      "nip": "197405271999031005",
+      "nama": "Solekhan, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "LidiR",
+      "nip": "196601131989032008",
+      "nama": "Lidia Ririn Andriani, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Musri",
+      "nip": "196610182000032001",
+      "nama": "Musriyatun, S.Ag",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Ag",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "HermS",
+      "nip": "196704062006041005",
+      "nama": "Drs. Herman Setiyono",
+      "gelar_depan": "Drs.",
+      "gelar_belakang": null,
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Smaji",
+      "nip": "196912092008011009",
+      "nama": "Sudarmaji, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Dzurr",
+      "nip": "197302202003122003",
+      "nama": "Dzurriyyati, S.Pd., M.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd.",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Agust",
+      "nip": "197308132000032003",
+      "nama": "Agustiana, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Nur A",
+      "nip": "197308172014122003",
+      "nama": "Nur Azizah, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Lisna",
+      "nip": "197410202001122002",
+      "nama": "Lisnawati, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Srtik",
+      "nip": "197604242014122002",
+      "nama": "Sudartik, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "DewiW",
+      "nip": "197809162012122001",
+      "nama": "Dewi Wilestari, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "FajaL",
+      "nip": "199204242019031016",
+      "nama": "Fajar Latif Sidiq, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IndrW",
+      "nip": "199305102019032020",
+      "nama": "Indri Widyarti, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "RizkA",
+      "nip": "199601152019032017",
+      "nama": "Rizka Arista Sofiyana, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Saniy",
+      "nip": "196805272022212002",
+      "nama": "Saniyatin, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "KhriD",
+      "nip": "196806292023211001",
+      "nama": "Khristine Dyah Yuniastuti, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "AnikW",
+      "nip": "196905092021212003",
+      "nama": "Anik Wahyuni, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Ika W",
+      "nip": "197707272023212003",
+      "nama": "Ika Wahyuningsih, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "EnikH",
+      "nip": "197708292022212001",
+      "nama": "Enik Handayani, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Wiyon",
+      "nip": "197709022021211001",
+      "nama": "Wiyono, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Emi S",
+      "nip": "198005212023212005",
+      "nama": "Emi Styowati, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "YuyuW",
+      "nip": "198011152023212008",
+      "nama": "Yuyun Widyawati, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Eko S",
+      "nip": "198109282023211001",
+      "nama": "Eko Sudiyono, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "ErnaW",
+      "nip": "198305262021212003",
+      "nama": "Erna Widiyawati, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "RostY",
+      "nip": "198707092022211006",
+      "nama": "Rostana Yuli Erdinoko, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "HaqiN",
+      "nip": "198807092022211004",
+      "nama": "Haqiqi Nurmadania, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "YongD",
+      "nip": "199107022023211007",
+      "nama": "Yongki Dwi Kurniawan, S.PdI",
+      "gelar_depan": null,
+      "gelar_belakang": "S.PdI",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Eka M",
+      "nip": "199608042023212016",
+      "nama": "Eka Mardiana Ayu Palupi, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IlhaH",
+      "nip": "200005172025211014",
+      "nama": "Ilham Hadi Arbain, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "SatrP",
+      "nip": null,
+      "nama": "Satria Pinandhita, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "FidaR",
+      "nip": null,
+      "nama": "Fidatur Rosa, S.PdI",
+      "gelar_depan": null,
+      "gelar_belakang": "S.PdI",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "DiahN",
+      "nip": null,
+      "nama": "Diah Novita Sari, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "AsyfA",
+      "nip": null,
+      "nama": "Asyfa Agustina, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Ary P",
+      "nip": null,
+      "nama": "Ary Pancawati Agustin",
+      "gelar_depan": null,
+      "gelar_belakang": null,
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Rosit",
+      "nip": null,
+      "nama": "Rosita, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Emi M",
+      "nip": null,
+      "nama": "Emi Masturoh, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "FirdS",
+      "nip": null,
+      "nama": "Firda Sukma F., S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Moh.R",
+      "nip": null,
+      "nama": "Moh. Ridwan Nullah",
+      "gelar_depan": null,
+      "gelar_belakang": null,
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "RifqM",
+      "nip": null,
+      "nama": "Rifqi Maulana",
+      "gelar_depan": null,
+      "gelar_belakang": null,
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "TamaW",
+      "nip": null,
+      "nama": "Tamamul Wafi",
+      "gelar_depan": null,
+      "gelar_belakang": null,
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Susba",
+      "nip": null,
+      "nama": "Drs. Susbandono",
+      "gelar_depan": "Drs.",
+      "gelar_belakang": null,
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "Imron",
+      "nip": null,
+      "nama": "Imron Agus Sriwiyono, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "RioD",
+      "nip": null,
+      "nama": "Rio Dwi Karisma, S.Pd",
+      "gelar_depan": null,
+      "gelar_belakang": "S.Pd",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    }
+  ],
+  "kelass": [
+    {
+      "id": "VII_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII A",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "Musri",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII B",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "IndrW",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII C",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "Lisna",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII D",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "FidaR",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII E",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "Ika W",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII F",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "HaqiN",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII G",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "Emi S",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII H",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "KhriD",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VII_I",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VII I",
+      "tingkat": 7,
+      "jenis": "REAL",
+      "wali_kelas_id": "Eko S",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII A",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "Saniy",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII B",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "RioD",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII C",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "Wiyon",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII D",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "Srtik",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII E",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "Agust",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII F",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "RizkA",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII G",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "Eka M",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII H",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "AnikW",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "VIII_I",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "VIII I",
+      "tingkat": 8,
+      "jenis": "REAL",
+      "wali_kelas_id": "RostY",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX A",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "YuyuW",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX B",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "EnikH",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX C",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "Dzurr",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX D",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "YongD",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX E",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "HermS",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX F",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "AsyfA",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX G",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "ErnaW",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX H",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "DewiW",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IX_I",
+      "academic_term_id": "2026-2027-ganjil",
+      "nama_kelas": "IX I",
+      "tingkat": 9,
+      "jenis": "REAL",
+      "wali_kelas_id": "Smaji",
+      "status_aktif": true,
+      "created_at": "2026-07-03T00:00:00Z"
+    }
+  ],
+  "mataPelajarans": [
+    {
+      "id": "PAI",
+      "kode": "PAI",
+      "nama": "Pend. Agama Islam dan Budi Pekerti",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 1,
+      "induk_mapel": "PABP",
+      "induk_nama": "Pendidikan Agama dan Budi Pekerti",
+      "agama": "Islam",
+      "jp_real": 3,
+      "jp_dapo": 3,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "PP",
+      "kode": "PP",
+      "nama": "Pendidikan Pancasila",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 2,
+      "induk_mapel": "PP",
+      "induk_nama": "Pendidikan Pancasila",
+      "agama": null,
+      "jp_real": 2,
+      "jp_dapo": 2,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "BIN",
+      "kode": "BIN",
+      "nama": "Bahasa Indonesia",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 3,
+      "induk_mapel": "BIN",
+      "induk_nama": "Bahasa Indonesia",
+      "agama": null,
+      "jp_real": 5,
+      "jp_dapo": 5,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "MTK",
+      "kode": "MTK",
+      "nama": "Matematika",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 4,
+      "induk_mapel": "MTK",
+      "induk_nama": "Matematika",
+      "agama": null,
+      "jp_real": 4,
+      "jp_dapo": 4,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IPA",
+      "kode": "IPA",
+      "nama": "IPA",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 5,
+      "induk_mapel": "IPA",
+      "induk_nama": "Ilmu Pengetahuan Alam",
+      "agama": null,
+      "jp_real": 4,
+      "jp_dapo": 4,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "IPS",
+      "kode": "IPS",
+      "nama": "IPS",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 6,
+      "induk_mapel": "IPS",
+      "induk_nama": "Ilmu Pengetahuan Sosial",
+      "agama": null,
+      "jp_real": 4,
+      "jp_dapo": 4,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "BIG",
+      "kode": "BIG",
+      "nama": "Bahasa Inggris",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 7,
+      "induk_mapel": "BIG",
+      "induk_nama": "Bahasa Inggris",
+      "agama": null,
+      "jp_real": 4,
+      "jp_dapo": 4,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "JOK",
+      "kode": "JOK",
+      "nama": "PJOK",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 8,
+      "induk_mapel": "JOK",
+      "induk_nama": "Pendidikan Jasmani, Olahraga, dan Kesehatan",
+      "agama": null,
+      "jp_real": 3,
+      "jp_dapo": 3,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "INF",
+      "kode": "INF",
+      "nama": "Informatika",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 9,
+      "induk_mapel": "INF",
+      "induk_nama": "Informatika",
+      "agama": null,
+      "jp_real": 2,
+      "jp_dapo": 2,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "SBD",
+      "kode": "SBD",
+      "nama": "Seni Rupa",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 10,
+      "induk_mapel": "SBD",
+      "induk_nama": "Seni Budaya",
+      "agama": null,
+      "jp_real": 2,
+      "jp_dapo": 2,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "BDR",
+      "kode": "BDR",
+      "nama": "Bahasa Daerah",
+      "kelompok_mapel": "B",
+      "aktif": true,
+      "mapping": 11,
+      "induk_mapel": "BDR",
+      "induk_nama": "Muatan Lokal",
+      "agama": null,
+      "jp_real": 2,
+      "jp_dapo": 2,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "BTQ",
+      "kode": "BTQ",
+      "nama": "Baca Tulis Al-Quran",
+      "kelompok_mapel": "B",
+      "aktif": true,
+      "mapping": 12,
+      "induk_mapel": "BTQ",
+      "induk_nama": "Muatan Lokal",
+      "agama": null,
+      "jp_real": 2,
+      "jp_dapo": 2,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "PAH",
+      "kode": "PAH",
+      "nama": "PA Hindu dan BTW",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 1,
+      "induk_mapel": "PABP",
+      "induk_nama": "Pendidikan Agama dan Budi Pekerti",
+      "agama": "Hindu",
+      "jp_real": 3,
+      "jp_dapo": 3,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "PAK",
+      "kode": "PAK",
+      "nama": "Pend. Agama Kristen dan Budi Pekerti",
+      "kelompok_mapel": "A",
+      "aktif": true,
+      "mapping": 1,
+      "induk_mapel": "PABP",
+      "induk_nama": "Pendidikan Agama dan Budi Pekerti",
+      "agama": "Kristen",
+      "jp_real": 3,
+      "jp_dapo": 3,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "BK",
+      "kode": "BK",
+      "nama": "Bimbingan Konseling",
+      "kelompok_mapel": "B",
+      "aktif": true,
+      "mapping": 13,
+      "induk_mapel": "BK",
+      "induk_nama": "Bimbingan Konseling",
+      "agama": null,
+      "jp_real": 0,
+      "jp_dapo": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    }
+  ],
+  "pembagianMengajars": [
+    {
+      "id": "pm_9_14_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_14_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_14_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_14_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_14_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_14_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_14_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_14_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "mapel_id": "SBD",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_17_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Solek",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 4
+    },
+    {
+      "id": "pm_9_18_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Solek",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_18_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Solek",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_18_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Solek",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_18_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Solek",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_20_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "LidiR",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_20_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "LidiR",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_20_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "LidiR",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_23_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_23_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_23_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_23_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_23_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_23_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_24_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "MLD",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 5
+    },
+    {
+      "id": "pm_8_24_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "MLD",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 5
+    },
+    {
+      "id": "pm_9_24_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Musri",
+      "mapel_id": "MLD",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 5
+    },
+    {
+      "id": "pm_9_26_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_26_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_26_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_26_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_26_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_26_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_26_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_26_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "mapel_id": "JOK",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_29_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Smaji",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_29_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Smaji",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_9_29_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Smaji",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_29_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Smaji",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_29_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Smaji",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_29_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Smaji",
+      "mapel_id": "BIG",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_32_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Dzurr",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_32_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Dzurr",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_32_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Dzurr",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_32_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Dzurr",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_32_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Dzurr",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_35_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_35_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_35_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_35_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_35_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_35_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_35_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_38_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Nur A",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_38_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Nur A",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_38_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Nur A",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_38_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Nur A",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_38_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Nur A",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_38_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Nur A",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_41_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_41_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_41_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_41_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "mapel_id": "BIG",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_41_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_41_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_41_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "mapel_id": "BIG",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_44_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Srtik",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_7_44_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Srtik",
+      "mapel_id": "IPA",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_44_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Srtik",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_44_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Srtik",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_47_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DewiW",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_47_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DewiW",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_9_47_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DewiW",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_9_47_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DewiW",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_9_47_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DewiW",
+      "mapel_id": "IPA",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_50_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_50_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_50_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_50_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_50_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_50_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_50_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_50_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "INF",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_51_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_9_51_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_7_53_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_7_53_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_9_54_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_54_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_54_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_54_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_54_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_54_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_54_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_54_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "mapel_id": "INF",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_56_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_56_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_56_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_56_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_56_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_56_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_56_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_56_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RizkA",
+      "mapel_id": "PAI",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_59_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Saniy",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 2
+    },
+    {
+      "id": "pm_8_60_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Saniy",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_60_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Saniy",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_60_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Saniy",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_60_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Saniy",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_62_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "KhriD",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_62_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "KhriD",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_62_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "KhriD",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_62_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "KhriD",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_63_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "KhriD",
+      "mapel_id": "PP",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 6
+    },
+    {
+      "id": "pm_7_63_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "KhriD",
+      "mapel_id": "PP",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 6
+    },
+    {
+      "id": "pm_8_65_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AnikW",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_65_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AnikW",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_65_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AnikW",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_65_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AnikW",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_65_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AnikW",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_65_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AnikW",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_65_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AnikW",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 4
+    },
+    {
+      "id": "pm_7_68_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_68_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_68_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_68_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_68_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_68_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_68_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_71_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "EnikH",
+      "mapel_id": "BDR",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_74_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_74_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_7_74_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "MTK",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_74_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_74_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "MTK",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_75_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "BDR",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_75_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "BDR",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_75_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "BDR",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_75_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Wiyon",
+      "mapel_id": "BDR",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_7_77_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 4
+    },
+    {
+      "id": "pm_7_77_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "BDR",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 4
+    },
+    {
+      "id": "pm_9_78_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_78_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_78_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_78_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_78_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_78_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_80_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YuyuW",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_80_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YuyuW",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_80_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YuyuW",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_80_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YuyuW",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_9_80_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YuyuW",
+      "mapel_id": "MTK",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_83_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eko S",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_83_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eko S",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_83_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eko S",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_83_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eko S",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_83_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eko S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_9_83_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eko S",
+      "mapel_id": "IPS",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 8
+    },
+    {
+      "id": "pm_8_86_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 3
+    },
+    {
+      "id": "pm_9_86_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_86_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_86_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_86_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_86_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_86_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_86_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_86_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "mapel_id": "PP",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_89_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "IPS",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 4
+    },
+    {
+      "id": "pm_8_90_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_90_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_90_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_90_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_90_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_90_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_90_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_8_90_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "mapel_id": "JOK",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_92_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_92_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_92_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_92_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_92_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_92_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_92_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_92_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "INF",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_93_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_8_93_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_8_93_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "mapel_id": "PP",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_9_95_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_95_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_95_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_95_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_95_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_95_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_95_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_9_95_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "mapel_id": "PAI",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_98_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "mapel_id": "PP",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_7_98_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "mapel_id": "PP",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_7_98_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "mapel_id": "PP",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_8_99_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_99_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_99_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_99_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "mapel_id": "IPA",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_101_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "PP",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_7_101_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "PP",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_7_101_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "PP",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 9
+    },
+    {
+      "id": "pm_8_102_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_102_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_102_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_102_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_102_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_102_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_102_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_102_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IlhaH",
+      "mapel_id": "SBD",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_104_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_104_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_104_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_104_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_104_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_104_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_104_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_104_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "SatrP",
+      "mapel_id": "JOK",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_107_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "mapel_id": "PAI",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 24
+    },
+    {
+      "id": "pm_7_110_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 14
+    },
+    {
+      "id": "pm_7_110_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 14
+    },
+    {
+      "id": "pm_7_110_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 14
+    },
+    {
+      "id": "pm_7_110_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 14
+    },
+    {
+      "id": "pm_7_110_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 14
+    },
+    {
+      "id": "pm_7_110_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 14
+    },
+    {
+      "id": "pm_7_110_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "SBD",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 14
+    },
+    {
+      "id": "pm_8_111_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_111_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_8_111_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DiahN",
+      "mapel_id": "IPS",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 12
+    },
+    {
+      "id": "pm_9_113_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AsyfA",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_9_113_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AsyfA",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_9_113_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AsyfA",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_9_113_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AsyfA",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_9_113_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AsyfA",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_8_116_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ary P",
+      "mapel_id": "PAK",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 3
+    },
+    {
+      "id": "pm_9_116_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ary P",
+      "mapel_id": "PAK",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 3
+    },
+    {
+      "id": "pm_7_119_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Rosit",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_119_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Rosit",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_119_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Rosit",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_7_119_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Rosit",
+      "mapel_id": "BIN",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 20
+    },
+    {
+      "id": "pm_8_119_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Rosit",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 5
+    },
+    {
+      "id": "pm_8_122_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi M",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 10
+    },
+    {
+      "id": "pm_8_122_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi M",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 10
+    },
+    {
+      "id": "pm_9_122_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi M",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 15
+    },
+    {
+      "id": "pm_9_122_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi M",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 15
+    },
+    {
+      "id": "pm_9_122_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi M",
+      "mapel_id": "BIN",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 15
+    },
+    {
+      "id": "pm_8_125_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FirdS",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_8_125_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FirdS",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_8_125_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FirdS",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_8_125_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FirdS",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_8_125_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FirdS",
+      "mapel_id": "BIN",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 25
+    },
+    {
+      "id": "pm_8_128_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_128_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_128_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_128_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_128_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_128_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_128_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_8_128_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Moh.R",
+      "mapel_id": "BTQ",
+      "kelas_id": "VIII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_7_131_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RifqM",
+      "mapel_id": "BTQ",
+      "kelas_id": "VII_H",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_A",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_A",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_B",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_B",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_C",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_C",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_D",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_D",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_E",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_E",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_F",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_F",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_G",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_G",
+      "jenis": "REAL",
+      "jp": 16
+    },
+    {
+      "id": "pm_9_134_H",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "TamaW",
+      "mapel_id": "BTQ",
+      "kelas_id": "IX_H",
+      "jenis": "REAL",
+      "jp": 16
+    }
+  ],
+  "tugasTambahans": [
+    {
+      "id": "tt_1",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "MamiS",
+      "nama_tugas": "Kepala Sekolah",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 18,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_2",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Solek",
+      "nama_tugas": "Wakil Kepala Sekolah 1",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 18,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_3",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AgusB",
+      "nama_tugas": "Wakil Kepala Sekolah 2",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 18,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_4",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Susba",
+      "nama_tugas": "Wakil Kepala Sekolah 3",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 18,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_5",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FajaL",
+      "nama_tugas": "Ur. Kurikulum",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_6",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YuyuW",
+      "nama_tugas": "Ur. Kurikulum",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_7",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "IndrW",
+      "nama_tugas": "Ur. Kurikulum",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_8",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "nama_tugas": "Ur. Kurikulum",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_9",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eko S",
+      "nama_tugas": "Ur. kesiswaan",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_10",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "nama_tugas": "Ur. kesiswaan",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_11",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "AsyfA",
+      "nama_tugas": "Ur. kesiswaan",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_12",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Agust",
+      "nama_tugas": "Ur. Kehumasan",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_13",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "nama_tugas": "Ur. Kehumasan",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_14",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Smaji",
+      "nama_tugas": "Urusan Sarana dan Prasarana",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_15",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HermS",
+      "nama_tugas": "Urusan Sarana dan Prasarana",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_16",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Imron",
+      "nama_tugas": "Urusan Sarana dan Prasarana",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_17",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "nama_tugas": "Kepala Perpustakaan",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 12,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_18",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Tendik_47",
+      "nama_tugas": "Kepala Perpustakaan",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 12,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_19",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Dzurr",
+      "nama_tugas": "Kepala Laboratorium IPA",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 12,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_20",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Tendik_50",
+      "nama_tugas": "Laboran (Kepala Laboratorium IPA)",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 12,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_21",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "HaqiN",
+      "nama_tugas": "Kepala Laboratorium Komputer",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 12,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_22",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Tendik_45",
+      "nama_tugas": "Laboran (Kepala Laboratorium Komputer)",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 12,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_23",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Ika W",
+      "nama_tugas": "Usaha Kesehatan Sekolah (UKS)",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_24",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RostY",
+      "nama_tugas": "Usaha Kesehatan Sekolah (UKS)",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_25",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Eka M",
+      "nama_tugas": "Usaha Kesehatan Sekolah (UKS)",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_26",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Tendik_43",
+      "nama_tugas": "Bendahara Sekolah (BOS)",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_27",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Tendik_46",
+      "nama_tugas": "Operator Dapodik",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_28",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "DewiW",
+      "nama_tugas": "Koperasi Sekolah dan Kantin",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_29",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Tendik_49",
+      "nama_tugas": "Koperasi Sekolah dan Kantin",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_30",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "ErnaW",
+      "nama_tugas": "Kelas 7",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_31",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Emi S",
+      "nama_tugas": "Kelas 8",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_32",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "nama_tugas": "Kelas 9",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_33",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "YongD",
+      "nama_tugas": "Musholla Putra",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_34",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "Lisna",
+      "nama_tugas": "Musholla Putri",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_35",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "FidaR",
+      "nama_tugas": "Bendahara Infaq",
+      "deskripsi": "Peran: Anggota",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    },
+    {
+      "id": "tt_36",
+      "academic_term_id": "2026-2027-ganjil",
+      "guru_id": "RioD",
+      "nama_tugas": "Pelatih Upacara",
+      "deskripsi": "Peran: Utama",
+      "jam_per_minggu": 0,
+      "created_at": "2026-07-03T00:00:00Z",
+      "updated_at": "2026-07-03T00:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "database-admin",
+  "description": "Database Architect - full access to migrations and schema",
+  "permissions": {
+    "read": [
+      "**/*"
+    ],
+    "write": [
+      "supabase/**",
+      "docs/**"
+    ],
+    "deny": []
+  }
+}
