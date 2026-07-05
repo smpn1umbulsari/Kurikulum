@@ -3,11 +3,17 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useAcademicTerms, useSetActiveTerm, useSaveAcademicTerm } from '../hooks/useAcademicTerm';
-import { Calendar, Check, X, CheckCircle, HelpCircle } from 'lucide-react';
+import { Calendar, Check, CheckCircle, HelpCircle } from 'lucide-react';
 import type { AcademicTerm } from '@/types';
 import { toast } from '../../../store/toastStore';
 import { SkeletonRow } from '../../../components/ui/SkeletonRow';
 import { EmptyState } from '../../../components/ui/EmptyState';
+import { Button } from '../../../components/ui/Button';
+import { Input } from '../../../components/ui/Input';
+import { Select } from '../../../components/ui/Select';
+import { FormField } from '../../../components/ui/FormField';
+import { Modal } from '../../../components/ui/Modal';
+import { KpiCard } from '../../../components/ui/KpiCard';
 
 const academicTermSchema = z.object({
   tahun_ajaran: z.string().regex(/^\d{4}\/\d{4}$/, 'Format Tahun Ajaran harus YYYY/YYYY (contoh: 2025/2026)'),
@@ -92,33 +98,25 @@ export default function AcademicTermPage() {
           <h2 className="text-2xl font-bold text-neutral-800">Data Master Tahun Ajaran</h2>
           <p className="text-sm text-neutral-500">Kelola tahun ajaran dan status aktif semester global</p>
         </div>
-        <button
-          onClick={openModal}
-          className="flex items-center justify-center h-12 px-4 rounded-medium text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-colors shadow-sm"
-        >
-          <Calendar className="mr-2 h-5 w-5" />
+        <Button onClick={openModal} variant="primary" size="lg" leftIcon={<Calendar className="h-5 w-5" />}>
           Tambah Tahun Ajaran
-        </button>
+        </Button>
       </div>
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-card border border-neutral-200 shadow-card flex items-center justify-between h-[120px]">
-          <div>
-            <p className="text-sm font-medium text-neutral-500">Tahun Ajaran Aktif</p>
-            <p className="text-2xl font-bold text-primary-600 mt-1">
-              {activeTerm ? `${activeTerm.tahun_ajaran} - ${activeTerm.semester}` : 'Belum ditentukan'}
-            </p>
-          </div>
-          <CheckCircle className="h-10 w-10 text-primary-500" />
-        </div>
-        <div className="bg-white p-6 rounded-card border border-neutral-200 shadow-card flex items-center justify-between h-[120px]">
-          <div>
-            <p className="text-sm font-medium text-neutral-500">Total Periode Terdaftar</p>
-            <p className="text-3xl font-bold text-neutral-800 mt-1">{totalTerms}</p>
-          </div>
-          <HelpCircle className="h-10 w-10 text-neutral-400" />
-        </div>
+        <KpiCard
+          label="Tahun Ajaran Aktif"
+          value={activeTerm ? `${activeTerm.tahun_ajaran} - ${activeTerm.semester}` : 'Belum ditentukan'}
+          icon={<CheckCircle className="h-10 w-10" />}
+          variant="success"
+        />
+        <KpiCard
+          label="Total Periode Terdaftar"
+          value={totalTerms}
+          icon={<HelpCircle className="h-10 w-10" />}
+          variant="default"
+        />
       </div>
 
       {/* Academic Terms Table */}
@@ -199,102 +197,77 @@ export default function AcademicTermPage() {
       </div>
 
       {/* Modal Form */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
-          <div className="bg-white rounded-card shadow-floating border border-neutral-200 max-w-lg w-full overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200 bg-neutral-50">
-              <h3 className="text-lg font-bold text-neutral-800">Tambah Tahun Ajaran Baru</h3>
-              <button onClick={closeModal} className="text-neutral-500 hover:text-neutral-700">
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-            <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-4">
-              <div className="space-y-1">
-                <label className="block text-sm font-medium text-neutral-700">Tahun Ajaran *</label>
-                <input
-                  type="text"
-                  {...register('tahun_ajaran')}
-                  placeholder="Format: YYYY/YYYY (e.g. 2025/2026)"
-                  className={`block w-full px-3 h-10 border ${
-                    errors.tahun_ajaran ? 'border-red-500 focus:ring-red-500' : 'border-neutral-300 focus:ring-primary-500'
-                  } rounded-medium text-sm focus:outline-none`}
-                />
-                {errors.tahun_ajaran && <p className="text-xs text-red-600">{errors.tahun_ajaran.message}</p>}
-              </div>
+      <Modal
+        isOpen={isOpen}
+        onClose={closeModal}
+        title="Tambah Tahun Ajaran Baru"
+        size="md"
+        footer={
+          <>
+            <Button variant="secondary" onClick={closeModal}>
+              Batal
+            </Button>
+            <Button
+              variant="primary"
+              onClick={handleSubmit(onSubmit)}
+              isLoading={saveTermMutation.isPending}
+              loadingText="Menyimpan..."
+            >
+              Simpan
+            </Button>
+          </>
+        }
+      >
+        <form className="space-y-4">
+          <FormField label="Tahun Ajaran" required error={errors.tahun_ajaran?.message}>
+            <Input
+              type="text"
+              placeholder="Format: YYYY/YYYY (e.g. 2025/2026)"
+              error={!!errors.tahun_ajaran}
+              {...register('tahun_ajaran')}
+            />
+          </FormField>
 
-              <div className="space-y-1">
-                <label className="block text-sm font-medium text-neutral-700">Semester *</label>
-                <select
-                  {...register('semester')}
-                  className={`block w-full px-3 h-10 border ${
-                    errors.semester ? 'border-red-500 focus:ring-red-500' : 'border-neutral-300 focus:ring-primary-500'
-                  } rounded-medium text-sm focus:outline-none bg-white`}
-                >
-                  <option value="GANJIL">GANJIL</option>
-                  <option value="GENAP">GENAP</option>
-                </select>
-                {errors.semester && <p className="text-xs text-red-600">{errors.semester.message}</p>}
-              </div>
+          <FormField label="Semester" required error={errors.semester?.message}>
+            <Select
+              options={[
+                { value: 'GANJIL', label: 'GANJIL' },
+                { value: 'GENAP', label: 'GENAP' },
+              ]}
+              error={!!errors.semester}
+              {...register('semester')}
+            />
+          </FormField>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-1">
-                  <label className="block text-sm font-medium text-neutral-700">Tanggal Mulai *</label>
-                  <input
-                    type="date"
-                    {...register('tanggal_mulai')}
-                    className={`block w-full px-3 h-10 border ${
-                      errors.tanggal_mulai ? 'border-red-500 focus:ring-red-500' : 'border-neutral-300 focus:ring-primary-500'
-                    } rounded-medium text-sm focus:outline-none`}
-                  />
-                  {errors.tanggal_mulai && <p className="text-xs text-red-600">{errors.tanggal_mulai.message}</p>}
-                </div>
-                <div className="space-y-1">
-                  <label className="block text-sm font-medium text-neutral-700">Tanggal Selesai *</label>
-                  <input
-                    type="date"
-                    {...register('tanggal_selesai')}
-                    className={`block w-full px-3 h-10 border ${
-                      errors.tanggal_selesai ? 'border-red-500 focus:ring-red-500' : 'border-neutral-300 focus:ring-primary-500'
-                    } rounded-medium text-sm focus:outline-none`}
-                  />
-                  {errors.tanggal_selesai && <p className="text-xs text-red-600">{errors.tanggal_selesai.message}</p>}
-                </div>
-              </div>
-
-              <div className="space-y-1 pt-2">
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    {...register('status')}
-                    id="term_status"
-                    className="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500"
-                  />
-                  <label htmlFor="term_status" className="ml-2 text-sm text-neutral-700 select-none">
-                    Aktifkan Semester Ini Langsung
-                  </label>
-                </div>
-              </div>
-
-              <div className="flex justify-end gap-3 pt-4 border-t border-neutral-200">
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className="px-4 py-2 border border-neutral-300 rounded-medium text-sm font-semibold text-neutral-700 hover:bg-neutral-50"
-                >
-                  Batal
-                </button>
-                <button
-                  type="submit"
-                  disabled={saveTermMutation.isPending}
-                  className="px-4 py-2 rounded-medium text-sm font-semibold text-white bg-primary-600 hover:bg-primary-700 disabled:opacity-50"
-                >
-                  {saveTermMutation.isPending ? 'Menyimpan...' : 'Simpan'}
-                </button>
-              </div>
-            </form>
+          <div className="grid grid-cols-2 gap-4">
+            <FormField label="Tanggal Mulai" required error={errors.tanggal_mulai?.message}>
+              <Input
+                type="date"
+                error={!!errors.tanggal_mulai}
+                {...register('tanggal_mulai')}
+              />
+            </FormField>
+            <FormField label="Tanggal Selesai" required error={errors.tanggal_selesai?.message}>
+              <Input
+                type="date"
+                error={!!errors.tanggal_selesai}
+                {...register('tanggal_selesai')}
+              />
+            </FormField>
           </div>
-        </div>
-      )}
+
+          <FormField>
+            <label className="flex items-center gap-2 text-sm text-neutral-700">
+              <input
+                type="checkbox"
+                {...register('status')}
+                className="h-4 w-4 text-primary-600 border-neutral-300 rounded focus:ring-primary-500"
+              />
+              Aktifkan Semester Ini Langsung
+            </label>
+          </FormField>
+        </form>
+      </Modal>
     </div>
   );
 }
