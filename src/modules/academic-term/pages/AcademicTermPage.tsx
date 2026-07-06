@@ -16,29 +16,29 @@ import { Modal } from '../../../components/ui/Modal';
 import { KpiCard } from '../../../components/ui/KpiCard';
 
 const datePreprocess = z.preprocess((val: any) => {
-  if (typeof val !== 'string') return val;
-  if (val.includes('/')) {
-    const parts = val.split('/');
-    if (parts.length === 3) {
-      const [p1, p2, p3] = parts;
-      if (p3.length === 4) {
-        const year = p3;
-        let month = p1;
-        let day = p2;
-        if (parseInt(p1) > 12) {
-          month = p2;
-          day = p1;
-        } else if (parseInt(p2) > 12) {
-          month = p1;
-          day = p2;
-        } else {
-          month = p1;
-          day = p2;
-        }
-        return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
-      }
+  if (!val) return val;
+  
+  let dateObj: Date | null = null;
+  
+  if (val instanceof Date) {
+    dateObj = val;
+  } else if (typeof val === 'string') {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(val)) {
+      return val;
+    }
+    const parsed = Date.parse(val);
+    if (!isNaN(parsed)) {
+      dateObj = new Date(parsed);
     }
   }
+  
+  if (dateObj) {
+    const year = dateObj.getFullYear();
+    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+  
   return val;
 }, z.string()) as unknown as z.ZodType<string>;
 

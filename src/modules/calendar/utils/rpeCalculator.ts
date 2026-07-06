@@ -45,13 +45,15 @@ export interface SemesterRPE {
 const NON_EFFECTIVE_TYPES = ['national_holiday', 'break'] as const;
 
 // Weekend days (0 = Sunday, 6 = Saturday)
-const WEEKEND_DAYS = [0, 6];
+const WEEKEND_DAYS_5 = [0, 6];
+const WEEKEND_DAYS_6 = [0];
 
 /**
  * Check if a date is a weekend
  */
-export function isWeekend(date: Date): boolean {
-  return WEEKEND_DAYS.includes(date.getDay());
+export function isWeekend(date: Date, workingDaysPerWeek: 5 | 6 = 5): boolean {
+  const weekends = workingDaysPerWeek === 5 ? WEEKEND_DAYS_5 : WEEKEND_DAYS_6;
+  return weekends.includes(date.getDay());
 }
 
 /**
@@ -120,7 +122,8 @@ export function getDateRange(startDate: Date, endDate: Date): Date[] {
 export function countEffectiveDays(
   startDate: Date,
   endDate: Date,
-  events: AcademicCalendarEvent[]
+  events: AcademicCalendarEvent[],
+  workingDaysPerWeek: 5 | 6 = 5
 ): {
   total: number;
   weekends: number;
@@ -135,7 +138,7 @@ export function countEffectiveDays(
   let breaks = 0;
 
   for (const date of dates) {
-    if (isWeekend(date)) {
+    if (isWeekend(date, workingDaysPerWeek)) {
       weekends++;
     } else if (isHolidayOrBreak(date, events)) {
       const event = events.find(e => e.date === formatDateISO(date));
@@ -164,7 +167,8 @@ export function countEffectiveDays(
 export function calculateWeeklyRPE(
   startDate: Date,
   endDate: Date,
-  events: AcademicCalendarEvent[]
+  events: AcademicCalendarEvent[],
+  workingDaysPerWeek: 5 | 6 = 5
 ): RPEWeek[] {
   const weeks: RPEWeek[] = [];
   const dates = getDateRange(startDate, endDate);
@@ -185,7 +189,8 @@ export function calculateWeeklyRPE(
       const stats = countEffectiveDays(
         weekDates[0],
         weekDates[weekDates.length - 1],
-        events
+        events,
+        workingDaysPerWeek
       );
 
       weeks.push({
@@ -213,7 +218,8 @@ export function calculateWeeklyRPE(
 export function calculateMonthlyRPE(
   startDate: Date,
   endDate: Date,
-  events: AcademicCalendarEvent[]
+  events: AcademicCalendarEvent[],
+  workingDaysPerWeek: 5 | 6 = 5
 ): MonthlyRPE[] {
   const monthlyBreakdown: MonthlyRPE[] = [];
   const dates = getDateRange(startDate, endDate);
@@ -233,9 +239,9 @@ export function calculateMonthlyRPE(
   for (const [, monthDates] of monthGroups) {
     const firstDay = monthDates[0];
     const lastDay = monthDates[monthDates.length - 1];
-    const stats = countEffectiveDays(firstDay, lastDay, events);
+    const stats = countEffectiveDays(firstDay, lastDay, events, workingDaysPerWeek);
 
-    const weeks = calculateWeeklyRPE(firstDay, lastDay, events);
+    const weeks = calculateWeeklyRPE(firstDay, lastDay, events, workingDaysPerWeek);
 
     monthlyBreakdown.push({
       month: firstDay.getMonth(),
@@ -260,16 +266,17 @@ export function calculateMonthlyRPE(
  */
 export function calculateSemesterRPE(
   academicTerm: AcademicTerm,
-  events: AcademicCalendarEvent[]
+  events: AcademicCalendarEvent[],
+  workingDaysPerWeek: 5 | 6 = 5
 ): SemesterRPE {
   const startDate = parseDate(academicTerm.tanggal_mulai.split('T')[0]);
   const endDate = parseDate(academicTerm.tanggal_selesai.split('T')[0]);
 
-  const overallStats = countEffectiveDays(startDate, endDate, events);
-  const monthlyBreakdown = calculateMonthlyRPE(startDate, endDate, events);
+  const overallStats = countEffectiveDays(startDate, endDate, events, workingDaysPerWeek);
+  const monthlyBreakdown = calculateMonthlyRPE(startDate, endDate, events, workingDaysPerWeek);
 
-  // Calculate total weeks from effective days (assuming 5 days/week)
-  const totalWeeks = Math.ceil(overallStats.effective / 5);
+  // Calculate total weeks from effective days (assuming 5 or 6 days/week)
+  const totalWeeks = Math.ceil(overallStats.effective / workingDaysPerWeek);
 
   return {
     semester: academicTerm.semester,
@@ -331,13 +338,14 @@ export function getDefaultIndonesianHolidays(year: number): AcademicCalendarEven
 export function calculateMonthRPE(
   year: number,
   month: number,
-  events: AcademicCalendarEvent[]
+  events: AcademicCalendarEvent[],
+  workingDaysPerWeek: 5 | 6 = 5
 ): MonthlyRPE {
   const startDate = new Date(year, month, 1);
   const endDate = new Date(year, month + 1, 0);
 
-  const stats = countEffectiveDays(startDate, endDate, events);
-  const weeks = calculateWeeklyRPE(startDate, endDate, events);
+  const stats = countEffectiveDays(startDate, endDate, events, workingDaysPerWeek);
+  const weeks = calculateWeeklyRPE(startDate, endDate, events, workingDaysPerWeek);
 
   return {
     month,

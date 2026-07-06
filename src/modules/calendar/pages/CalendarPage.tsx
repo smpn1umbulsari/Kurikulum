@@ -120,13 +120,13 @@ export default function CalendarPage() {
   // Calculate semester RPEs
   const ganjilRPE = useMemo(() => {
     if (!ganjilTerm) return null;
-    return calculateSemesterRPE(ganjilTerm, events.filter(e => e.is_active));
-  }, [ganjilTerm, events]);
+    return calculateSemesterRPE(ganjilTerm, events.filter(e => e.is_active), workingDaysPerWeek);
+  }, [ganjilTerm, events, workingDaysPerWeek]);
 
   const genapRPE = useMemo(() => {
     if (!genapTerm) return null;
-    return calculateSemesterRPE(genapTerm, events.filter(e => e.is_active));
-  }, [genapTerm, events]);
+    return calculateSemesterRPE(genapTerm, events.filter(e => e.is_active), workingDaysPerWeek);
+  }, [genapTerm, events, workingDaysPerWeek]);
 
   // Helper to extract monthly breakdown for table RPE
   const getRpeCalculation = (rpeData: any, term: AcademicTerm | undefined) => {
@@ -212,7 +212,7 @@ export default function CalendarPage() {
             event_nama: matchingEvent?.title,
             event: matchingEvent,
           };
-        } else if (isSat) {
+        } else if (isSat && workingDaysPerWeek === 5) {
           cache[dateStr] = {
             display_text: 'Sab',
             class_name: 'weekend',
@@ -265,7 +265,7 @@ export default function CalendarPage() {
     }
 
     return cache;
-  }, [events, activeSemesterTab, ganjilTerm, genapTerm, currentTerm, currentDate]);
+  }, [events, activeSemesterTab, ganjilTerm, genapTerm, currentTerm, currentDate, workingDaysPerWeek]);
 
   // Filtered timeline events
   const filteredTimelineEvents = useMemo(() => {
@@ -566,7 +566,7 @@ export default function CalendarPage() {
                             if (isSun) {
                               cellBg = "bg-red-50 hover:bg-red-100 border-red-200";
                               cellText = "text-red-700 font-extrabold";
-                            } else if (isSat) {
+                            } else if (isSat && workingDaysPerWeek === 5) {
                               cellBg = "bg-neutral-50 hover:bg-neutral-100 border-neutral-200";
                               cellText = "text-neutral-500 font-bold";
                             } else if (cachedDay) {
