@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { createBrowserClient } from "@supabase/ssr";
+import { createClient } from "@/lib/supabase/client";
 import { useRouter, useParams } from "next/navigation";
 
 interface Siswa {
@@ -50,10 +50,7 @@ export default function InputNilaiPage() {
 
   // Load data
   const loadData = useCallback(async () => {
-    const supabase = createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    );
+    const supabase = createClient();
 
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
@@ -126,12 +123,17 @@ export default function InputNilaiPage() {
         .order("siswas(nama)");
 
       if (kelasSiswas) {
-        const siswaList: Siswa[] = kelasSiswas
-          .map((ks: { siswa_id: string; siswas: { id: string; nama: string; nis: string } }) => ({
-            id: ks.siswas.id,
-            nama: ks.siswas.nama,
-            nis: ks.siswas.nis,
-          }))
+        const siswaList: Siswa[] = (kelasSiswas as any[])
+          .map((ks) => {
+            const s = Array.isArray(ks.siswas) ? ks.siswas[0] : ks.siswas;
+            if (!s) return null;
+            return {
+              id: s.id,
+              nama: s.nama,
+              nis: s.nis,
+            };
+          })
+          .filter((s): s is Siswa => s !== null)
           .sort((a, b) => a.nama.localeCompare(b.nama));
         setSiswas(siswaList);
       }
@@ -199,10 +201,7 @@ export default function InputNilaiPage() {
     setError(null);
     setSuccess(null);
 
-    const supabase = createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    );
+    const supabase = createClient();
 
     try {
       const updates = [];
@@ -309,7 +308,7 @@ export default function InputNilaiPage() {
       <div className="mb-6">
         <button
           onClick={() => router.push("/dashboard")}
-          className="text-blue-600 hover:text-blue-800 mb-4"
+          className="text-primary-600 hover:text-primary-800 mb-4"
         >
           ← Kembali ke Dashboard
         </button>
@@ -412,7 +411,7 @@ export default function InputNilaiPage() {
                             step="0.01"
                             value={displayNilai}
                             onChange={(e) => handleNilaiChange(siswa.id, e.target.value)}
-                            className="w-24 px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-24 px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary-500"
                             placeholder="0-100"
                           />
                         </td>
@@ -421,7 +420,7 @@ export default function InputNilaiPage() {
                             type="text"
                             value={displayCatatan}
                             onChange={(e) => handleCatatanChange(siswa.id, e.target.value)}
-                            className="w-full px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary-500"
                             placeholder="Catatan opsional"
                           />
                         </td>
@@ -454,7 +453,7 @@ export default function InputNilaiPage() {
                         onClick={() => setCurrentPage(page)}
                         className={`px-3 py-1 border rounded text-sm ${
                           currentPage === page
-                            ? "bg-blue-600 text-white border-blue-600"
+                            ? "bg-primary-600 text-white border-primary-600"
                             : "border-gray-300 hover:bg-gray-100"
                         }`}
                       >
@@ -489,7 +488,7 @@ export default function InputNilaiPage() {
             <button
               onClick={handleSave}
               disabled={saving || Object.keys(draftValues).length === 0}
-              className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+              className="px-6 py-2 bg-primary-600 text-white rounded hover:bg-primary-700 disabled:opacity-50"
             >
               {saving ? "Menyimpan..." : "Simpan Nilai"}
             </button>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { createBrowserClient } from "@supabase/ssr";
+import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 
 interface TeachingAssignment {
@@ -22,10 +22,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     const fetchAssignments = async () => {
-      const supabase = createBrowserClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      );
+      const supabase = createClient();
 
       const { data: { user } } = await supabase.auth.getUser();
       
@@ -122,7 +119,7 @@ export default function DashboardPage() {
                     </div>
                     <button
                       onClick={() => router.push(`/dashboard/input-nilai/${assignment.pembagian_id}`)}
-                      className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      className="px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                     >
                       Input Nilai
                     </button>

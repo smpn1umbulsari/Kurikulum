@@ -44,3 +44,130 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* ==========================================================================
+   ACCESSIBILITY SYSTEMS
+   ========================================================================== */
+
+/* Large Font Mode */
+.large-font {
+  font-size: 1.15rem !important; /* Scale up root base */
+}
+.large-font .text-xs { font-size: 0.875rem !important; }
+.large-font .text-sm { font-size: 1rem !important; }
+.large-font .text-base { font-size: 1.15rem !important; }
+.large-font .text-lg { font-size: 1.35rem !important; }
+.large-font .text-xl { font-size: 1.55rem !important; }
+.large-font .text-2xl { font-size: 1.85rem !important; }
+.large-font .text-3xl { font-size: 2.25rem !important; }
+
+/* High Contrast Mode */
+.high-contrast {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+.high-contrast body,
+.high-contrast main,
+.high-contrast nav,
+.high-contrast .navbar-hc {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.high-contrast .bg-white,
+.high-contrast .bg-gray-50,
+.high-contrast .bg-gray-100,
+.high-contrast .bg-gray-200 {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+.high-contrast button,
+.high-contrast a,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  outline-color: #000000 !important;
+}
+
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus {
+  outline: 2px solid #000000 !important;
+  border-color: #000000 !important;
+}
+
+.high-contrast .text-gray-400,
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-600,
+.high-contrast .text-gray-700,
+.high-contrast .text-gray-800,
+.high-contrast .text-gray-900,
+.high-contrast .title-hc,
+.high-contrast .user-email {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.high-contrast .bg-primary-600,
+.high-contrast .bg-primary-500,
+.high-contrast .bg-blue-600 {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast .bg-primary-600:hover,
+.high-contrast .bg-primary-500:hover,
+.high-contrast .bg-blue-600:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.high-contrast table,
+.high-contrast th,
+.high-contrast td {
+  border: 2px solid #000000 !important;
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+.high-contrast thead,
+.high-contrast thead th {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid #000000 !important;
+}
+
+.high-contrast tr:hover td {
+  background-color: #e5e7eb !important;
+}
+
+.high-contrast .border,
+.high-contrast .border-t,
+.high-contrast .border-b,
+.high-contrast .border-l,
+.high-contrast .border-r,
+.high-contrast .divide-y > * {
+  border-color: #000000 !important;
+}
+
